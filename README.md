@@ -74,9 +74,30 @@ flowchart LR
 | 사건 관측·사진 | 카메라 영상, 추론 결과 | 확정 사건과 사진 기록. 지상 시연 성능 수용과 비행 중 전체 절차 검증은 구분 |
 | 복귀·착륙 | 임무 상태, PX4 상태, 승인·제어권 | 제어 로직과 회귀 시험. 최신 후보의 전체 실비행 시나리오는 미검증 |
 
-팀 보고서의 개발 평가에서는 한국어 명령 40건 모두 JSON 파싱·스키마 검사를 통과했고, 정상 명령 12건의 핵심 필드 96개가 기대값과 일치했습니다. 화재·연기 모델은 평가셋 mAP50 71.55%, 이상행동 v2는 검증셋 Accuracy 64.85%와 Macro-F1 44.10%를 기록했습니다. 이 수치는 해당 평가 자료의 결과이며 실제 순찰 영상의 성능을 보장하지 않습니다. PC/WSL·Gazebo·PX4 SITL에서는 사건 확정 뒤 정지·5초 촬영·귀환·착륙 완료 사례 3건이 보고되었습니다. 실기체에서는 경로 비행과 조종기 개입을 확인했으나 전체 통합 시나리오는 남아 있습니다.
+다음 수치는 [프로젝트 소개 발표자료](docs/03.발표자료/프로젝트소개.pptx), [팀 최종보고서](docs/01.보고서/최종보고서.docx), [최신 후보 설명](software/runtimeio1/README_RUNTIMEIO1.md)에 기록된 **서로 다른 시험**입니다. 평가 자료에 표본 수나 합격 기준이 없는 경우에는 임의로 채우지 않았습니다.
 
-최신 `runtimeio1` 후보의 로컬 기록은 ROS 747개, 핵심 Python 156개, native·observe 38개, frontend 70개 시험 통과입니다. 시험군에는 중복이 있을 수 있으며 합산해 독립 시험 수로 해석하지 않습니다. [후보 설명](software/runtimeio1/README_RUNTIMEIO1.md)과 [릴리스 목록](software/runtimeio1/ROUTE_RELEASE_MANIFEST.json)을 참고하세요.
+| 시험·근거 | 환경·입력 규모 | 판정 기준 | 기록된 결과와 한계 |
+| --- | --- | --- | --- |
+| 자연어 명령 ([발표자료](docs/03.발표자료/프로젝트소개.pptx), 9쪽) | 정상·누락·충돌·비지원·위험 요청을 포함한 한국어 명령 40건. 정상 명령 12건은 8개 핵심 필드 비교 | JSON 파싱·스키마 유효성, 정상 명령의 필드 일치 | 파싱·스키마 40/40, 핵심 필드 96/96. Gemini 응답을 받아 검증 완료까지 평균 3.29초로 발표했으며, p95와 음성 입력부터 비행 제어까지의 지연은 제시되지 않음 |
+| 화재·연기 탐지 ([보고서](docs/01.보고서/최종보고서.docx), 비전 모델 결과) | 모델 평가셋. 표본 수는 README에서 확인할 수 있는 자료에 미기재 | 객체 탐지 mAP50·mAP50-95 | mAP50 71.55%, mAP50-95 39.75%. 야간·역광·실제 비행 고도 영상 성능은 추가 검증 필요 |
+| 이상행동 분류 ([발표자료](docs/03.발표자료/프로젝트소개.pptx), 9쪽 / [보고서](docs/01.보고서/최종보고서.docx), 비전 모델 결과) | 각 자료의 평가 데이터. 표본 수와 두 평가의 모델·데이터 차이는 공개 자료에 미기재 | Accuracy, 보고서는 Macro-F1도 제시 | 발표자료 Accuracy 64.85%; 보고서 Accuracy 54.55%, Macro-F1 41.93%. 같은 조건의 성능 변화로 해석할 수 없음 |
+| PX4 SITL 추적·착륙 ([보고서](docs/01.보고서/최종보고서.docx), 시스템 통합 결과) | PX4 SITL에서 목표 고도 2.0m, TRACK 30초 사례 | TRACK 유지, 종료 시 착륙·비무장 상태 | 마지막 고도 1.82m, 종료 시 `landed=true`, `armed=false`. 실제 기체의 장애물 대응이나 전체 순찰 시나리오 결과는 아님 |
+| 실기체 시험 ([발표자료](docs/03.발표자료/프로젝트소개.pptx), 10쪽 및 팀 확인) | 현장 경로 지정·비행. 시험 횟수·시간은 공개 자료에 미기재 | 경로 비행과 조종기 개입 확인 | 해당 기능은 확인했으나 최신 통합 후보의 장애물 회피→사건 검출·촬영→복귀 완주는 미검증 |
+
+최종보고서는 Gemini 정량 평가를 보류로 기술하며, 발표자료의 40건·평균 3.29초 결과와 측정 시기·조건의 관계는 공개 자료에 설명되지 않습니다. 따라서 이 값을 음성 입력부터 비행 제어까지의 성능으로 확대하지 않습니다. 이상행동 수치도 자료 간 평가 조건이 확인되기 전까지 직접 비교하지 않습니다.
+
+이전 PC/WSL·Gazebo·PX4 SITL에서 사건 확정 뒤 정지·5초 촬영·귀환·착륙 완료 사례 3건이 보고되었으나, 그 실행 로그는 이 저장소에 포함하지 않았습니다. 이를 최신 후보의 실기체 검증 결과로 취급하지 않습니다.
+
+최신 `runtimeio1` 후보의 **로컬 회귀 시험**은 별도로 구분합니다.
+
+| 시험군 | 실행 환경·판정 | 기록된 통과 수 |
+| --- | --- | ---: |
+| ROS 2 | 로컬 ROS 패키지 시험 통과 | 747 |
+| 핵심 Python | 로컬 Python 시험 통과 | 156 |
+| native·observe | 로컬 네이티브·관측 시험 통과 | 38 |
+| frontend | 로컬 프론트엔드 시험 통과 | 70 |
+
+시험군에는 중복이 있을 수 있으므로 합계를 독립 시험 수로 해석하지 않습니다. 로컬 시험 통과는 PX4 SITL 재실행이나 실기체 비행 성공을 뜻하지 않습니다. 공개 소스 목록과 해시는 [릴리스 목록](software/runtimeio1/ROUTE_RELEASE_MANIFEST.json)에 있습니다.
 
 ### 4.3. 디렉토리 구조
 
@@ -102,22 +123,61 @@ flowchart LR
 
 ### 5.1. 설치절차 및 실행 방법
 
-**소스 확인만 할 때** Python 3.10 이상에서 다음을 실행합니다. 이 검사는 장비를 연결하거나 비행 명령을 보내지 않습니다.
+이 공개본에서 바로 재현할 수 있는 범위는 **소스 무결성 검사, 대시보드 빌드·시험, 오프라인 실험 계획 생성**입니다. 전체 시뮬레이션에는 별도 PX4/Gazebo 설치와 ROS underlay가 필요하고, 실기체에는 현장 장비·설정·모델 가중치가 더 필요합니다. 1번은 복제할 위치에서, 2~5번은 저장소 루트에서 새 터미널을 열어 실행하는 예시입니다.
+
+**1. 소스 받기·무결성 확인:** Git과 Python 3.10 이상이 필요합니다. `RELEASE_OK`가 나오면 공개 파일의 해시가 릴리스 목록과 일치합니다. 장비를 연결하거나 비행 명령을 보내지 않습니다.
 
 ```bash
+git clone https://github.com/2t3g0/capstone2026-team-07.git
+cd capstone2026-team-07
 python software/runtimeio1/scripts/verify_route_release.py software/runtimeio1
 ```
 
-**대시보드 빌드와 시험**에는 Node.js와 npm이 필요합니다.
+**2. 대시보드 실행·시험:** Node.js와 npm이 필요합니다. 개발 서버는 `http://127.0.0.1:5173`에서 열립니다. API와 ROS gateway를 연결하지 않은 상태에서는 화면만 확인할 수 있고 임무 실행은 되지 않습니다.
 
 ```bash
 cd software/runtimeio1/frontend
 npm ci
 npm test
 npm run build
+npm run dev
 ```
 
-**통합 실행**에는 Ubuntu/Jetson의 ROS 2 Humble, `px4_msgs`, 기존 ROS underlay, 카메라·추론 모델 환경, Pixhawk 연결 및 장비별 설정이 별도로 필요합니다. [빌드·시험 스크립트](software/runtimeio1/scripts/build_test_scenario.sh)는 기존 underlay 경로를 전제로 합니다. [실행 스크립트](software/runtimeio1/scripts/run_scenario.sh)는 관측 서비스를 중지하고 USB 소유권을 확인하므로, 장비 담당자가 [USB 경로 절차](software/runtimeio1/docs/MAVLINK_USB_ROUTE_KO.md)를 검토한 뒤 사용해야 합니다. 저장소를 복제한 것만으로 실기체 실행 준비가 끝나지는 않습니다.
+**3. 오프라인 시뮬레이션 계획 생성:** 다음 명령은 단계 6의 잠긴 설정·실행 계획만 만듭니다. `--execute`가 없으므로 PX4/Gazebo나 기체를 시작하지 않으며, `result.json`의 `UNVERIFIED`는 비행 성공을 뜻하지 않습니다. 출력은 저장소 밖의 지정한 폴더에 생성됩니다. 다른 단계의 의미와 입력 방법은 [6단계 실험 안내](software/runtimeio1/docs/FIELD_EXPERIMENTS_QUICKSTART_20260912_KO.md)를 참고하세요.
+
+```powershell
+python software/runtimeio1/scripts/run_field_experiment.py --stage integrated --mode simulate --output-root "$env:TEMP\vectorforce-field-plans"
+```
+
+**4. ROS 빌드·시험(준비된 Ubuntu/Jetson):** ROS 2 Humble, `px4_msgs`, `colcon`, Python 시험 의존성과 기존 ROS underlay가 필요합니다. underlay의 `install/setup.bash`를 지정하고 [빌드·시험 스크립트](software/runtimeio1/scripts/build_test_scenario.sh)를 실행합니다. 이 스크립트는 ROS 패키지 빌드·시험과 일부 Python 회귀 시험을 실행하며, 기체를 비행시키지 않습니다.
+
+```bash
+export JOLGWA_ROS_UNDERLAY=/path/to/existing/ros2_ws/install/setup.bash
+bash software/runtimeio1/scripts/build_test_scenario.sh
+```
+
+**5. API·전체 시뮬레이션·실기체 연동:** Windows API는 별도 경로·랜드마크 목록(`JOLGWA_ROAD_CATALOG`, `JOLGWA_LANDMARK_CATALOG`)이 필요합니다. 이 공개본에는 해당 현장 목록과 모델 가중치가 없어 `npm run dev`만으로 자연어 계획이나 전체 시뮬레이션이 실행되지 않습니다. 목록 파일을 준비한 경우 다음처럼 [의존성 목록](software/runtimeio1/windows_dashboard_api/requirements-field.txt)을 설치하고 [시작 스크립트](software/runtimeio1/windows_dashboard_api/scripts/start_operator_api.py)를 실행할 수 있습니다. 경로는 실제 파일 위치로 바꾸고, Gemini 계획 요청에 필요한 `GEMINI_API_KEY`는 별도로 설정합니다.
+
+```powershell
+cd software/runtimeio1/windows_dashboard_api
+py -3.11 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements-field.txt
+$env:JOLGWA_ROAD_CATALOG = 'C:\실제경로\pnu_roads.json'
+$env:JOLGWA_LANDMARK_CATALOG = 'C:\실제경로\pnu_landmarks.json'
+$env:JOLGWA_CUSTOM_ROUTES = Join-Path $env:LOCALAPPDATA 'VECTORFORCE\custom_routes.json'
+.\.venv\Scripts\python.exe scripts/start_operator_api.py
+```
+
+기존 PX4/Gazebo SITL과 ROS underlay를 먼저 준비한 다음 실험 단계별 입력·증거 확인 절차를 [6단계 실험 안내](software/runtimeio1/docs/FIELD_EXPERIMENTS_QUICKSTART_20260912_KO.md)에 따라 진행합니다. 공개본만으로 SITL 완주를 재현하는 단일 실행 명령은 제공하지 않습니다.
+
+| 구성 요소 | 주소·포트 | 용도 |
+| --- | --- | --- |
+| 대시보드 개발 서버 | `http://127.0.0.1:5173` | 브라우저 UI |
+| Windows 운영자 API | `http://<Windows PC 주소>:9293` | 계획 API 및 운영자·ROS WebSocket |
+| Jetson 계산 서비스 | `127.0.0.1:8768` | 장비용 시나리오 launch의 로컬 추론 서비스 |
+| QGC 전달 라디오 수신(선택) | UDP `14551` | 관측 전용 실험 입력 |
+
+**실기체 관련 절차:** [시나리오 실행 스크립트](software/runtimeio1/scripts/run_scenario.sh)는 기존 관측 서비스를 중지하고 Pixhawk USB 소유권을 확인합니다. `false` 인수도 카메라·모델·USB 장비를 사용할 수 있으므로, 장비 담당자가 [USB 경로 절차](software/runtimeio1/docs/MAVLINK_USB_ROUTE_KO.md)를 확인한 뒤 현장에서만 사용해야 합니다. 물리 출력 활성화는 이 README의 일반 설치 절차에 포함하지 않습니다.
 
 네트워크 주소와 장치 이름은 코드의 현장 예시 설정입니다. 실제 환경에 맞게 검토해야 하며, 키·토큰·모델 가중치는 별도 관리합니다.
 
