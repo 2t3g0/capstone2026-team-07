@@ -132,11 +132,9 @@ npm run build
 
 ### 6.1. 프로젝트 소개 자료
 
-- [팀 보고서 초안 DOCX](docs/01.보고서/보고서_초안.docx)
-- [프로젝트 포스터 초안 PDF](docs/02.포스터/포스터_초안.pdf)
+- [팀 최종보고서 DOCX](docs/01.보고서/최종보고서.docx)
+- [프로젝트 포스터 PDF](docs/02.포스터/포스터.pdf)
 - [프로젝트 소개 발표자료 PPTX](docs/03.발표자료/프로젝트소개.pptx)
-
-제공된 포스터 파일의 1쪽만 프로젝트 내용이며, 나머지 3쪽은 다른 과제의 템플릿입니다. 공개한 초안 PDF에는 프로젝트 1쪽만 담았습니다.
 
 ### 6.2. 시연 영상
 
@@ -159,4 +157,4 @@ npm run build
 - [학과 캡스톤 저장소 템플릿](https://github.com/pnucse-capstone2026/Capstone-Template-2026)
 - [ROS 2 Humble 문서](https://docs.ros.org/en/humble/)
 - [PX4 문서](https://docs.px4.io/main/en/)
-- 연구·모델·데이터셋 출처의 전체 목록은 [팀 보고서 초안 6장](docs/01.보고서/보고서_초안.docx)을 참고하세요.
+- 연구·모델·데이터셋 출처의 전체 목록은 [팀 최종보고서 6장](docs/01.보고서/최종보고서.docx)을 참고하세요.
