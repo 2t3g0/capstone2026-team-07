@@ -138,7 +138,9 @@ npm run build
 
 ### 6.2. 시연 영상
 
-- [졸업과제 소개 동영상 — 부산대학교 정보컴퓨터공학부 YouTube 채널](https://youtu.be/e1Y19TbHnKA?si=wTHPoN0OIrua0t9u)
+[![VECTORFORCE 졸업과제 소개 동영상 썸네일](https://img.youtube.com/vi/e1Y19TbHnKA/0.jpg)](https://youtu.be/e1Y19TbHnKA?si=wTHPoN0OIrua0t9u)
+
+[졸업과제 소개 동영상 — 부산대학교 정보컴퓨터공학부 YouTube 채널](https://youtu.be/e1Y19TbHnKA?si=wTHPoN0OIrua0t9u)
 
 발표자료에도 시뮬레이션 영상이 포함되어 있습니다. 소개 영상과 시뮬레이션 자료는 최신 통합 후보의 전체 실기체 비행 성공을 입증하는 자료로 해석하지 않습니다.
 
