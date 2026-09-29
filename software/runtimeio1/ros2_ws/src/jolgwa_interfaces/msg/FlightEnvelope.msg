@@ -1,0 +1,32 @@
+uint8 PROFILE_NORMAL=0
+uint8 PROFILE_LOW_SPEED_2M_V1=1
+uint8 PROFILE_LOW_SPEED_1M_V1=2
+
+uint8 SETPOINT_POSITION=1
+uint8 SETPOINT_VELOCITY=2
+
+uint8 ALTITUDE_REFERENCE_NONE=0
+uint8 ALTITUDE_REFERENCE_FC_HOME_ALIGNED_V1=1
+uint8 ALTITUDE_REFERENCE_FC_HOME_ALIGNED_V2=2
+
+builtin_interfaces/Time stamp
+string mission_id
+uint32 sequence
+string output_epoch
+uint64 output_sequence
+uint8 profile
+float32 max_horizontal_speed_m_s
+float32 max_vertical_speed_m_s
+float32 target_altitude_home_m
+float32 max_altitude_home_m
+float32 home_z_ned_m
+uint8 altitude_reference
+float32 altitude_reference_max_error_m
+uint32 altitude_reference_epoch
+uint32 altitude_reference_sequence
+uint32 altitude_reference_local_time_boot_ms
+uint32 altitude_reference_global_time_boot_ms
+uint8 setpoint_kind
+float32[3] expected_position_ned_m
+float32[3] expected_velocity_ned_m_s
+float32 expected_yaw_rad

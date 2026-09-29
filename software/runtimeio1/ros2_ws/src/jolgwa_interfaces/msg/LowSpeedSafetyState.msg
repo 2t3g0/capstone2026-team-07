@@ -1,0 +1,7 @@
+builtin_interfaces/Time stamp
+bool valid
+bool offboard_loss_action_land
+bool land_speed_valid
+float32 mpc_land_speed_m_s
+uint32 age_ms
+string detail

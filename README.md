@@ -1,237 +1,160 @@
-# Template for Capstone
-이 레파지토리는 학생들이 캡스톤 프로젝트 결과물을 위한 레파지토리 생성시에 참고할 내용들을 담고 있습니다.
-1. 레파지토리 생성
-2. 레파지토리 구성
-3. 레파지토리 제출 
-4. README.md 가이드라인
-5. README.md 작성팁
+# LLM과 Jetson을 이용한 교내 순찰 UAV 시스템
 
----
+부산대학교 정보컴퓨터공학부 2026년 캡스톤디자인 TEAM-07 **VECTORFORCE**의 프로그램 공개 저장소입니다. 이 저장소는 2026-09-29 기준 **최신 통합 후보의 소스**를 담습니다. 로컬 빌드와 회귀 시험을 통과했지만, 이 후보로 장애물 회피→사건 검출·촬영→경로 복귀를 끝까지 수행한 **실기체 비행 성공은 아직 확인되지 않았습니다**.
 
-## 1. 레파지토리 생성
-- [https://classroom.github.com/a/i3v_IYnd]
-- 위 Github Classroom 링크에 접속해 본인 조의 github 레파지토리를 생성하세요.
+이 프로젝트의 자연어 명령 해석, 비전 모델, 시뮬레이션과 실기체 단위 시험 결과는 [팀 보고서 초안](docs/01.보고서/보고서_초안.docx)에 정리되어 있습니다. 보고서에는 편집 메모가 남아 있습니다. 보고서의 이전 시험 결과와 이 저장소의 최신 후보 검증 상태는 구분해 읽어 주세요.
 
-<img width="1171" height="592" alt="image" src="https://github.com/user-attachments/assets/22919da2-dee5-4ca8-98f1-3dd63d7a6013" />
+## 1. 프로젝트 배경
 
+### 1.1. 국내외 시장 현황 및 문제점
 
-- 레포지토리 생성 시 팀명은 `TEAM-{조 번호}` 형식으로 생성하세요.
-- 예를 들어, 2026년도 3조의 팀명은 `TEAM-03` 입니다.
-- 이 경우 `Capstone2026-team-03`이란 이름으로 레파지토리가 생성됩니다.
+드론 순찰에서는 조종자가 기체 조작과 영상 감시를 동시에 맡을 수 있어 인지 부담이 큽니다. 여러 구역을 반복하며 사람·차량·화재 같은 대상을 확인할 때는 관측 결과를 임무 및 비행 상태와 연결할 필요가 있습니다. 팀 보고서는 자연어 기반 UAV 제어와 RGB-D 장애물 회피의 관련 연구를 검토합니다. 시장 규모에 관한 수치는 조사하지 않았으므로 제시하지 않습니다.
 
----
+### 1.2. 필요성과 기대효과
 
-## 2. 레파지토리 구성
-- 레파지토리 내에 README.md 파일 생성하고 아래의 가이드라인과 작성팁을 참고하여 README.md 파일을 작성하세요. (이 레파지토리의 SAMPLE_README.md 참조)
-- 레파지토리 내에 docs 디렉토리를 생성하고 docs 디렉토리 내에는 과제 수행 하면서 작성한 각종 보고서, 발표자료를 올려둡니다. (이 레파지토리의 docs 디렉토리 참조)
-- 그 밖에 레파지토리의 폴더 구성은 과제 결과물에 따라 자유롭게 구성하되 가급적 코드의 목적이나 기능에 따라 디렉토리를 나누어 구성하세요.
+본 프로젝트는 음성·텍스트 명령을 구조화된 순찰 임무로 변환하고, 운영자가 승인한 경로의 위험 대상과 사건을 관측·기록하는 것을 목표로 합니다. 기대효과는 반복 순찰의 조작 부담을 줄이고 사건 근거를 재검토할 수 있게 하는 것입니다. 실제 운영 효과는 추가 현장 평가가 필요합니다.
 
----
+## 2. 개발 목표
 
-## 3. 레파지토리 제출 
+### 2.1. 목표 및 세부 내용
 
-- **`[주의]` 레파지토리 제출**은 해당 레파지토리의 ownership을 **학과 계정**으로 넘기는 것이므로 되돌릴 수 없습니다.
-- **레파지토리 제출** 전, 더 이상 수정 사항이 없는지 다시 한번 확인하세요.
-- github 레파지토리에서 Settings > General > Danger zone > Transfer 클릭
-  <img src="https://github.com/user-attachments/assets/cb2361d4-e07e-4b5d-9116-aa80dddd8a8b" alt="소유주 변경 경로" width="500" />
-  
-- [ Specify an organization or username ]에 'PNUCSE'를 입력하고 확인 메세지를 입력하세요.
-  <img src="https://github.com/user-attachments/assets/7c63955d-dcfe-4ac3-bdb6-7d2620575f3a" alt="소유주 변경" width="400" />
+- 대시보드에서 음성·텍스트 명령을 임무로 구성하고, 경로와 정책을 검증·승인합니다.
+- Jetson의 RGB·깊이 입력으로 사람·차량·화재·연기, 이상행동 및 장애물을 관측합니다.
+- ROS 2 제어 경로에서 승인, 상태 신선도, 조종기 개입, 착륙 조건을 확인합니다.
+- 확정된 사건의 사진·기록을 남기고 경로 복귀 및 종료 동작을 연결합니다.
 
----
+### 2.2. 기존 서비스 대비 차별성
 
-## 4. README.md 가이드 라인
-- README 파일 작성시에 아래의 5가지 항목의 내용은 필수적으로 포함해야 합니다.
-- 아래의 항목이외에 프로젝트의 이해를 돕기 위한 내용을 추가해도 됩니다.
-- SAMPLE_README.md 이 단순한 형태의 예제이니 참고하세요.
+자연어 명령을 바로 비행 명령으로 사용하지 않고, 구조화된 계획의 스키마·정책을 검증한 뒤 운영자의 승인을 받습니다. 경로 승인, 관측 근거, 조종자 개입과 사건 기록을 같은 임무 흐름으로 묶었습니다. 팀 보고서는 관련 연구와 접근 방식을 비교하며, 상용 서비스 대비 우위를 입증한 평가는 제시하지 않습니다.
 
-```markdown
-### 1. 프로젝트 배경
-#### 1.1. 국내외 시장 현황 및 문제점
-> 시장 조사 및 기존 문제점 서술
+### 2.3. 사회적 가치 도입 계획
 
-#### 1.2. 필요성과 기대효과
-> 왜 이 프로젝트가 필요한지, 기대되는 효과 등
+교내 순찰 중 화재·연기와 이상행동 같은 상황의 확인과 기록을 돕는 용도를 상정합니다. 사람이나 행동에 대한 자동 판정은 현장 확인을 대체하지 않으며, 촬영 자료의 공개 범위와 보관은 실제 운영 절차에 따라 정해야 합니다.
 
-### 2. 개발 목표
-#### 2.1. 목표 및 세부 내용
-> 전체적인 개발 목표, 주요 기능 및 기획 내용
+## 3. 시스템 설계
 
-#### 2.2. 기존 서비스 대비 차별성 
-> 유사 서비스 비교 및 차별점 부각
+### 3.1. 시스템 구성도
 
-#### 2.3. 사회적 가치 도입 계획 
-> 프로젝트의 공공성, 지속 가능성, 환경 보호 등
-### 3. 시스템 설계
-#### 3.1. 시스템 구성도
-> 이미지 혹은 텍스트로 시스템 아키텍쳐 작성
->
-#### 3.2. 사용 기술
-> 프론트엔드, 백엔드, API 등 구체 기술 스택
-
-### 4. 개발 결과
-#### 4.1. 전체 시스템 흐름도
-> 기능 흐름 설명 및 도식화 가능
->
-#### 4.2. 기능 설명 및 주요 기능 명세서
-> 주요 기능에 대한 상세 설명, 각 기능의 입력/출력 및 설명
->
-#### 4.3. 디렉토리 구조
->
-#### 4.4. 산업체 멘토링 의견 및 반영 사항
-> 멘토 피드백과 적용한 사례 정리
-
-### 5. 설치 및 실행 방법
->
-#### 5.1. 설치절차 및 실행 방법
-> 설치 명령어 및 준비 사항, 실행 명령어, 포트 정보 등
-#### 5.2. 오류 발생 시 해결 방법
-> 선택 사항, 자주 발생하는 오류 및 해결책 등
-
-### 6. 소개 자료 및 시연 영상
-#### 6.1. 프로젝트 소개 자료
-> PPT 등
-#### 6.2. 시연 영상
-> 영상 링크 또는 주요 장면 설명
-
-### 7. 팀 구성
-#### 7.1. 팀원별 소개 및 역할 분담
->
-#### 7.2. 팀원 별 참여 후기
-> 개별적으로 느낀 점, 협업, 기술적 어려움 극복 사례 등
-
-### 8. 참고 문헌 및 출처
-
+```mermaid
+flowchart LR
+    U["운영자·웹 대시보드"] --> A["Windows API / 승인"]
+    A --> G["ROS 2 Gateway·Mission Manager"]
+    G --> C["Controller·MAVLink Bridge"]
+    C --> P["PX4 / Pixhawk"]
+    D["Jetson RGB·깊이 관측"] --> G
+    D --> E["사건 관측·사진 기록"]
+    E --> A
+    P --> G
 ```
 
-## 5. README.md 작성팁 
-* 마크다운 언어를 이용해 README.md 파일을 작성할 때 참고할 수 있는 마크다운 언어 문법을 공유합니다.  
-* 다양한 예제와 보다 자세한 문법은 [이 문서](https://www.markdownguide.org/basic-syntax/)를 참고하세요.
+그림은 목표 구성과 코드 경계를 나타냅니다. 최신 후보의 전체 경로가 실기체에서 검증됐다는 뜻은 아닙니다. 실제 하드웨어 연결과 비행 시험은 별도 절차가 필요합니다.
 
-### 5.1. 헤더 Header
+### 3.2. 사용 기술
+
+| 영역 | 기술 |
+| --- | --- |
+| 화면 | React, TypeScript, Vite, Leaflet |
+| API·서비스 | Python, FastAPI, WebSocket |
+| 기체 연동 | ROS 2 Humble, PX4, MAVLink, Pixhawk |
+| 관측 | Jetson Orin Nano, Intel RealSense D435, YOLO11n, MobileNetV3-Small·GRU |
+
+추론 모델 가중치와 장비별 개인 설정은 이 저장소에 포함하지 않습니다.
+
+## 4. 개발 결과
+
+### 4.1. 전체 시스템 흐름도
+
+운영자 준비·승인 → 상태 및 입력 신선도 확인 → 경로·관측 처리 → 장애물 또는 사건 대응 → 기록 및 종료 결과 확인 순서로 설계했습니다. 실행 중 실제 명령 전송은 별도 출력 게이트와 장비 상태에 좌우됩니다.
+
+### 4.2. 기능 설명 및 주요 기능 명세서
+
+| 기능 | 입력 | 출력·현재 확인 범위 |
+| --- | --- | --- |
+| 경로 준비·승인 | 운영자 입력, 현재 기체 상태 | 임무 계획과 승인 상태. 과거 대시보드 경로 비행은 사용자 확인 결과로 기록됨 |
+| 장애물 관측·회피 | RGB·깊이, 위치·자세, 신선도 | 거리 판단과 제어 후보. 최신 통합 후보의 전체 실비행 회피 완료는 미검증 |
+| 사건 관측·사진 | 카메라 영상, 추론 결과 | 확정 사건과 사진 기록. 지상 시연 성능 수용과 비행 중 전체 절차 검증은 구분 |
+| 복귀·착륙 | 임무 상태, PX4 상태, 승인·제어권 | 제어 로직과 회귀 시험. 최신 후보의 전체 실비행 시나리오는 미검증 |
+
+팀 보고서의 개발 평가에서는 한국어 명령 40건 모두 JSON 파싱·스키마 검사를 통과했고, 정상 명령 12건의 핵심 필드 96개가 기대값과 일치했습니다. 화재·연기 모델은 평가셋 mAP50 71.55%, 이상행동 v2는 검증셋 Accuracy 64.85%와 Macro-F1 44.10%를 기록했습니다. 이 수치는 해당 평가 자료의 결과이며 실제 순찰 영상의 성능을 보장하지 않습니다. PC/WSL·Gazebo·PX4 SITL에서는 사건 확정 뒤 정지·5초 촬영·귀환·착륙 완료 사례 3건이 보고되었습니다. 실기체에서는 경로 비행과 조종기 개입을 확인했으나 전체 통합 시나리오는 남아 있습니다.
+
+최신 `runtimeio1` 후보의 로컬 기록은 ROS 747개, 핵심 Python 156개, native·observe 38개, frontend 70개 시험 통과입니다. 시험군에는 중복이 있을 수 있으며 합산해 독립 시험 수로 해석하지 않습니다. [후보 설명](software/runtimeio1/README_RUNTIMEIO1.md)과 [릴리스 목록](software/runtimeio1/ROUTE_RELEASE_MANIFEST.json)을 참고하세요.
+
+### 4.3. 디렉토리 구조
+
+- `software/runtimeio1/`: 최신 통합 후보 소스, 설정, 빌드·검증 스크립트, 기술 문서
+- `software/runtimeio1/frontend/`: 운영 대시보드
+- `software/runtimeio1/ros2_ws/`: ROS 2 패키지
+- `software/runtimeio1/src/` 및 `windows_dashboard_api/`: Python 서비스와 Windows API 소스
+- `docs/`: 팀의 보고서·포스터·발표자료
+
+이전 후보와 로컬 검증 로그는 공개본에서 제외했습니다. 공개본의 해시 목록은 제외한 파일에 맞춰 갱신했으며, 실행 코드의 원본 해시는 유지했습니다.
+
+### 4.4. 산업체 멘토링 의견 및 반영 사항
+
+제공된 보고서에는 산업체 멘토링 의견과 반영 내역이 없어, 확인 가능한 내용을 받은 뒤 작성합니다.
+
+## 5. 설치 및 실행 방법
+
+### 5.1. 설치절차 및 실행 방법
+
+**소스 확인만 할 때** Python 3.10 이상에서 다음을 실행합니다. 이 검사는 장비를 연결하거나 비행 명령을 보내지 않습니다.
+
+```bash
+python software/runtimeio1/scripts/verify_route_release.py software/runtimeio1
 ```
-# This is a Header 1
-## This is a Header 2
-### This is a Header 3
-#### This is a Header 4
-##### This is a Header 5
-###### This is a Header 6
-####### This is a Header 7 은 지원되지 않습니다.
+
+**대시보드 빌드와 시험**에는 Node.js와 npm이 필요합니다.
+
+```bash
+cd software/runtimeio1/frontend
+npm ci
+npm test
+npm run build
 ```
-<br />
 
-### 5.2. 인용문 BlockQuote
-```
-> This is a first blockqute.
->	> This is a second blockqute.
->	>	> This is a third blockqute.
-```
-> This is a first blockqute.
->	> This is a second blockqute.
->	>	> This is a third blockqute.
-<br />
+**통합 실행**에는 Ubuntu/Jetson의 ROS 2 Humble, `px4_msgs`, 기존 ROS underlay, 카메라·추론 모델 환경, Pixhawk 연결 및 장비별 설정이 별도로 필요합니다. [빌드·시험 스크립트](software/runtimeio1/scripts/build_test_scenario.sh)는 기존 underlay 경로를 전제로 합니다. [실행 스크립트](software/runtimeio1/scripts/run_scenario.sh)는 관측 서비스를 중지하고 USB 소유권을 확인하므로, 장비 담당자가 [USB 경로 절차](software/runtimeio1/docs/MAVLINK_USB_ROUTE_KO.md)를 검토한 뒤 사용해야 합니다. 저장소를 복제한 것만으로 실기체 실행 준비가 끝나지는 않습니다.
 
-### 5.3. 목록 List
-* **Ordered List**
-```
-1. first
-2. second
-3. third  
-```
-1. first
-2. second
-3. third
-<br />
+네트워크 주소와 장치 이름은 코드의 현장 예시 설정입니다. 실제 환경에 맞게 검토해야 하며, 키·토큰·모델 가중치는 별도 관리합니다.
 
-* **Unordered List**
-```
-* 하나
-  * 둘
+### 5.2. 오류 발생 시 해결 방법
 
-+ 하나
-  + 둘
+- `RELEASE_OK`가 나오지 않으면 복사 중 파일이 빠졌거나 변경됐는지 해시 목록을 확인합니다.
+- ROS build에서 패키지를 찾지 못하면 Humble, `px4_msgs`, 기존 underlay 설치·source 상태를 확인합니다.
+- USB 소유자가 남아 있으면 관측 서비스의 정상 종료 절차를 확인합니다. 다른 프로세스를 강제 종료해 우회하지 않습니다.
+- 관측 입력이 만료되거나 위치 추정이 유효하지 않으면 비행 가능 판정으로 취급하지 않습니다.
 
-- 하나
-  - 둘
-```
-* 하나
-  * 둘
+## 6. 소개 자료 및 시연 영상
 
-+ 하나
-  + 둘
+### 6.1. 프로젝트 소개 자료
 
-- 하나
-  - 둘
-<br />
+- [팀 보고서 초안 DOCX](docs/01.보고서/보고서_초안.docx)
+- [프로젝트 포스터 초안 PDF](docs/02.포스터/포스터_초안.pdf)
+- [프로젝트 소개 발표자료 PPTX](docs/03.발표자료/프로젝트소개.pptx)
 
-### 5.4. 코드 CodeBlock
-* 코드 블럭 이용 '``'
-```
-여러줄 주석 "```" 이용
-"```
-#include <stdio.h>
-int main(void){
-  printf("Hello world!");
-  return 0;
-}
-```"
+제공된 포스터 파일의 1쪽만 프로젝트 내용이며, 나머지 3쪽은 다른 과제의 템플릿입니다. 공개한 초안 PDF에는 프로젝트 1쪽만 담았습니다.
 
-단어 주석 "`" 이용
-"`Hello world`"
+### 6.2. 시연 영상
 
-* 큰 따움표(") 없이 사용하세요.
-``` 
-<br />
+발표자료에는 시뮬레이션 영상이 포함되어 있습니다. 별도 시연 영상 링크는 확인되지 않았습니다. 시뮬레이션과 실기체 시험의 범위는 구분합니다.
 
-### 5.5. 링크 Link
-```
-[Title](link)
-[부산대학교 정보컴퓨터공학부](https://cse.pusan.ac.kr/cse/index..do)
+## 7. 팀 구성
 
-<link>
-<https://cse.pusan.ac.kr/cse/index..do>
-``` 
-[부산대학교 정보컴퓨터공학부](https://cse.pusan.ac.kr/cse/index..do)
+### 7.1. 팀원별 소개 및 역할 분담
 
-<https://cse.pusan.ac.kr/cse/index..do>
-<br />
+| 팀원 | 보고서에 기재된 담당 업무 |
+| --- | --- |
+| 이태경 | 사건 탐지 모델 개발 |
+| 윤태영 | 대시보드·회피 알고리즘 제작, 시스템 통합 |
 
-### 5.6. 강조 Highlighting
-```
-*single asterisks*
-_single underscores_
-**double asterisks**
-__double underscores__
-~~cancelline~~
-```
-*single asterisks* <br />
-_single underscores_ <br />
-**double asterisks** <br />
-__double underscores__ <br />
-~~cancelline~~  <br />
-<br />
+지도교수는 이도훈 교수입니다. 최종 시연과 발표 준비는 공동 작업으로 기재되어 있습니다.
 
-### 5.7. 이미지 Image
-```
-<img src="image URL" width="600px" title="Title" alt="Alt text"></img>
-![Alt text](image URL "Optional title")
-```
-- 웹에서 작성한다면 README.md 내용 안으로 이미지를 드래그 앤 드롭하면 이미지가 생성됩니다.
-- 웹이 아닌 로컬에서 작성한다면, github issue에 이미지를 드래그 앤 드롭하여 image url 을 얻을 수 있습니다. (URL만 복사하고 issue는 제출 안 함.)
-  <img src="https://github.com/user-attachments/assets/0fe3bff1-7a2b-4df3-b230-cac4ef5f6d0b" alt="이슈에 image 올림" width="600" />
-  <img src="https://github.com/user-attachments/assets/251c6d42-b36b-4ad4-9cfa-fa2cc67a9a50" alt="image url 복사" width="600" />
+### 7.2. 팀원 별 참여 후기
 
+제공된 자료에 팀원별 참여 후기가 없어, 팀원이 작성한 내용을 받은 뒤 반영합니다.
 
-### 5.8. 유튜브 영상 추가
-```markdown
-[![영상 이름](유튜브 영상 썸네일 URL)](유튜브 영상 URL)
-[![부산대학교 정보컴퓨터공학부 소개](http://img.youtube.com/vi/zh_gQ_lmLqE/0.jpg)](https://www.youtube.com/watch?v=zh_gQ_lmLqE)    
-```
-[![부산대학교 정보컴퓨터공학부 소개](http://img.youtube.com/vi/zh_gQ_lmLqE/0.jpg)](https://www.youtube.com/watch?v=zh_gQ_lmLqE)    
+## 8. 참고 문헌 및 출처
 
-- 이때 유튜브 영상 썸네일 URL은 유투브 영상 URL로부터 다음과 같이 얻을 수 있습니다.
-
-- `Youtube URL`: https://www.youtube.com/watch?v={동영상 ID}
-- `Youtube Thumbnail URL`: http://img.youtube.com/vi/{동영상 ID}/0.jpg 
-- 예를 들어, https://www.youtube.com/watch?v=zh_gQ_lmLqE 라고 하면 썸네일의 주소는 http://img.youtube.com/vi/zh_gQ_lmLqE/0.jpg 이다.
-
+- [학과 캡스톤 저장소 템플릿](https://github.com/pnucse-capstone2026/Capstone-Template-2026)
+- [ROS 2 Humble 문서](https://docs.ros.org/en/humble/)
+- [PX4 문서](https://docs.px4.io/main/en/)
+- 연구·모델·데이터셋 출처의 전체 목록은 [팀 보고서 초안 6장](docs/01.보고서/보고서_초안.docx)을 참고하세요.

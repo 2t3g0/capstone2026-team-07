@@ -1,0 +1,15 @@
+string event_id
+string event_type
+string track_id
+float32 confidence
+string source
+# Required for capture_then_rtl; explicitly legacy clients may leave empty.
+string mission_id
+string evidence_clock_id
+uint64 evidence_expires_monotonic_ns
+---
+bool accepted
+string lease_id
+string mission_id
+builtin_interfaces/Time expires_at
+string message

@@ -1,0 +1,18 @@
+schema_version: "1.0"
+coordinate_convention: ENU
+site: GAZEBO_MULTI_BUILDING_COURSE
+simulation_only: true
+home_geo: [37.412173071650805, -121.998878727967, 0.0]
+geofence:
+  # Dedicated SITL fence.  North maps to PX4 NED +X in this course.
+  polygon_enu:
+    - [-30.0, -20.0]
+    - [30.0, -20.0]
+    - [30.0, 200.0]
+    - [-30.0, 200.0]
+zones:
+  GAZEBO_MULTI:
+    name: three_depot_straight_course
+    waypoints:
+      - [0.0, 0.0, 4.0, 0.0]
+      - [0.0, 190.0, 4.0, 0.0]

@@ -1,0 +1,7 @@
+builtin_interfaces/Time stamp
+bool valid
+float64 latitude_deg
+float64 longitude_deg
+float32 altitude_home_relative_m
+float32 altitude_amsl_m
+uint32 age_ms

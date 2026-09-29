@@ -1,0 +1,6 @@
+{
+  "status": "OK",
+  "request_purpose": "EXECUTE_MISSION",
+  "patrol_zones": ["GAZEBO_SMALL"],
+  "monitor_events": ["ALL"]
+}

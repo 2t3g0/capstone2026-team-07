@@ -1,0 +1,7 @@
+string proposal_id
+bool approved
+string operator_id
+---
+bool accepted
+string mission_id
+string message

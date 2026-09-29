@@ -1,0 +1,47 @@
+# Overlay only: requires the rebuilt 2026-09-11 interfaces and owned SITL launch.
+# Not a hardware flight authorization. Depth/Phase1 services are started separately.
+operator_gateway:
+  ros__parameters:
+    enforce_integrated_event_policy: true
+
+jetson_d435i_bridge:
+  ros__parameters:
+    # Target supply cadence only. The one-request/busy-skip worker still needs
+    # measured >=12 unique frames/3s and actual temporal readiness evidence.
+    phase1_publish_interval_s: 0.1
+
+mission_manager:
+  ros__parameters:
+    event_completion_policy: capture_then_rtl
+    event_return_source_mode: single_publisher_sitl
+    enable_event_control: true
+    event_control_max_duration_s: 7.0
+    event_return_clearance_timeout_s: 30.0
+    event_return_timeout_s: 300.0
+    event_return_acceptance_radius_m: 0.4
+    event_return_home_radius_m: 1.0
+    event_return_max_landing_height_m: 5.0
+    event_return_trace_max_points: 4096
+
+px4_offboard_controller:
+  ros__parameters:
+    simulation_only: true
+    allow_real_hardware: false
+    enable_px4_commands: false
+    require_jetson_safety: true
+    route_heading_gate_enabled: true
+    terminal_requires_owned_offboard: true
+
+event_response:
+  ros__parameters:
+    completion_policy: capture_then_rtl
+    enabled: true
+    recording_enabled: true
+    camera_backend: ros_compressed
+    gimbal_backend: fixed
+    gimbal_commands_enabled: false
+    allow_local_capture_without_control: false
+    ros_camera_topic: /camera/front/compressed
+    capture_duration_s: 5.0
+    capture_fps: 25
+    request_source: gazebo-d435-event-node

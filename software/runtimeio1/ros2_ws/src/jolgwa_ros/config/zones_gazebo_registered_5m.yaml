@@ -1,0 +1,13 @@
+# PNU-georeferenced FLAT synthetic test course, NOT actual site terrain.
+# No zone fixture: execute the actual UI route_id/revision/waypoint snapshot.
+schema_version: "1.0"
+coordinate_convention: ENU
+site: PNU_FLAT_REGISTERED_ROUTE_TEST_ONLY
+simulation_only: true
+geofence:
+  polygon_enu:
+    - [-10.0, -10.0]
+    - [10.0, -10.0]
+    - [10.0, 50.0]
+    - [-10.0, 50.0]
+zones: {}

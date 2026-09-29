@@ -1,0 +1,4 @@
+string output_epoch
+uint8 handshake_version
+uint64 output_sequence
+jolgwa_interfaces/OffboardCommand command

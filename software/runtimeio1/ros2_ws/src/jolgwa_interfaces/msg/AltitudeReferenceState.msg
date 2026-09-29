@@ -1,0 +1,65 @@
+builtin_interfaces/Time stamp
+
+uint8 STATE_ALIGNING=0
+uint8 STATE_READY=1
+uint8 STATE_STALE=2
+uint8 STATE_UNSTABLE=3
+uint8 STATE_HOME_CORRECTION_PENDING=4
+uint8 state
+
+bool valid
+bool stable
+uint32 transport_epoch
+uint32 sequence
+uint32 local_time_boot_ms
+uint32 global_time_boot_ms
+uint32 local_age_ms
+uint32 global_age_ms
+uint32 source_skew_ms
+float32 local_z_ned_m
+# Raw GLOBAL_POSITION_INT.relative_alt.  This remains relative to PX4's
+# current, mutable Home and is diagnostic only for low-speed control.
+float32 fc_altitude_home_relative_m
+# The same FC altitude normalized to the immutable Home captured by the
+# bridge.  Low-speed safety consumers must use this value.
+float32 normalized_fc_altitude_home_relative_m
+float32 global_altitude_amsl_m
+float32 candidate_aligned_home_z_ned_m
+float32 stable_aligned_home_z_ned_m
+float32 candidate_span_m
+uint32 sample_count
+uint32 window_duration_ms
+
+uint8 HOME_CORRECTION_NONE=0
+uint8 HOME_CORRECTION_PENDING=1
+uint8 HOME_CORRECTION_APPLIED=2
+uint8 HOME_CORRECTION_REJECTED=3
+uint8 home_correction_state
+
+uint8 HOME_PHASE_PROVISIONAL=0
+uint8 HOME_PHASE_EXECUTION_LOCKED=1
+uint8 HOME_PHASE_CORRECTION_PENDING=2
+uint8 HOME_PHASE_REJECTED=3
+uint8 home_phase
+bool execution_home_lock_valid
+string execution_home_mission_id
+uint32 execution_home_lock_revision
+uint32 provisional_home_revision
+float32 provisional_px4_home_altitude_amsl_m
+float32 provisional_px4_home_z_ned_m
+bool home_correction_valid
+uint32 home_correction_revision
+uint32 home_correction_pending_age_ms
+float32 frozen_px4_home_altitude_amsl_m
+float32 current_px4_home_altitude_amsl_m
+float32 frozen_px4_home_z_ned_m
+float32 current_px4_home_z_ned_m
+float32 home_altitude_correction_m
+float32 home_z_correction_m
+float32 home_correction_opposition_error_m
+float32 frozen_home_crosscheck_error_m
+bool estimator_reset_counter_valid
+uint8 estimator_reset_counter
+bool altitude_epoch_failure_latched
+string home_correction_detail
+string detail

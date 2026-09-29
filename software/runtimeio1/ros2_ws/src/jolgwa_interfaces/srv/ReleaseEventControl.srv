@@ -1,0 +1,7 @@
+string lease_id
+string source
+bool capture_succeeded
+string detail
+---
+bool accepted
+string message

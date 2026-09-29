@@ -1,0 +1,47 @@
+{
+  "source_ulog": "log_67_2026-9-28-17-11-56.ulg",
+  "sha256": "2901e770ef61446c698f4cb4b994191f70936067652674b4f746848f937e23e3",
+  "home_transitions": [
+    {
+      "time": "2026-09-28T17:11:50.293+09:00",
+      "timestamp_us": 3028466188,
+      "alt": 30.363527297973633,
+      "z": 5.313070297241211,
+      "update_count": 1014,
+      "valid_alt": 1,
+      "valid_lpos": 1,
+      "manual_home": 0
+    },
+    {
+      "time": "2026-09-28T17:11:52.204+09:00",
+      "timestamp_us": 3030376845,
+      "alt": 30.390106201171875,
+      "z": 5.286491394042969,
+      "update_count": 1015,
+      "valid_alt": 1,
+      "valid_lpos": 1,
+      "manual_home": 0
+    },
+    {
+      "time": "2026-09-28T17:11:52.237+09:00",
+      "timestamp_us": 3030409709,
+      "alt": 35.74919128417969,
+      "z": -0.07259368896484375,
+      "update_count": 1016,
+      "valid_alt": 1,
+      "valid_lpos": 1,
+      "manual_home": 0
+    },
+    {
+      "time": "2026-09-28T17:11:56.341+09:00",
+      "timestamp_us": 3034513737,
+      "alt": 30.385475158691406,
+      "z": 5.2911224365234375,
+      "update_count": 1017,
+      "valid_alt": 1,
+      "valid_lpos": 1,
+      "manual_home": 0
+    }
+  ],
+  "note": "ULog Home metadata deltas, replayed with synthetic healthy transport context; not fabricated MAVLink capture"
+}

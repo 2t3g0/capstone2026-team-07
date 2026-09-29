@@ -1,0 +1,43 @@
+builtin_interfaces/Time stamp
+string proposal_id
+bool valid
+string site_id
+float64 home_latitude_deg
+float64 home_longitude_deg
+float32[3] home_ned_m
+float32[3] first_target_ned_m
+float32 first_leg_m
+float32 maximum_leg_m
+string reason
+string preview_state
+bool altitude_reference_error_valid
+
+# Keep the raw PX4 Home NED separate from the one-time aligned vertical datum.
+bool altitude_reference_valid
+# Numeric diagnostics can remain meaningful when the reference is blocked.
+bool altitude_reference_diagnostics_available
+float32 aligned_home_z_ned_m
+float32 fc_altitude_home_relative_m
+float32 normalized_fc_altitude_home_relative_m
+float32 frame_altitude_home_relative_m
+float32 altitude_reference_error_m
+string altitude_reference_detail
+uint8 home_correction_state
+bool home_correction_valid
+uint32 home_correction_revision
+float32 home_altitude_correction_m
+float32 home_correction_opposition_error_m
+string home_correction_detail
+uint8 home_phase
+bool execution_home_lock_valid
+string execution_home_mission_id
+uint32 execution_home_lock_revision
+uint32 provisional_home_revision
+float32 provisional_px4_home_altitude_amsl_m
+float32 provisional_px4_home_z_ned_m
+float32 frozen_px4_home_altitude_amsl_m
+float32 frozen_px4_home_z_ned_m
+float32 current_px4_home_altitude_amsl_m
+float32 current_px4_home_z_ned_m
+float32 home_z_correction_m
+bool altitude_epoch_failure_latched

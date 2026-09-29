@@ -1,0 +1,7 @@
+string mission_id
+string operator_id
+string reason
+---
+bool accepted
+string message
+string mission_id

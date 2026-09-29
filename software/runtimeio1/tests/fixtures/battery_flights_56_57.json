@@ -1,0 +1,2086 @@
+[
+  {
+    "file": "log_56_2026-9-28-13-31-12.ulg",
+    "sha256": "ee8d34cb6ace426d658c4627b4c6d266482cb4283c05bffa5a3d8c648b5a3888",
+    "firmware": "d6f12ad1c4f70ad3230afd7d86e971421e02fef4",
+    "samples": [
+      {
+        "t_s": 0.04721,
+        "voltage_v": 15.378178596496582,
+        "current_a": 0.0,
+        "remaining": 0.5889236927032471,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 0.057168,
+        "voltage_v": 15.359038352966309,
+        "current_a": 0.0,
+        "remaining": 0.5883677005767822,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 0.247167,
+        "voltage_v": 15.41736888885498,
+        "current_a": 0.0,
+        "remaining": 0.5844480991363525,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 0.447184,
+        "voltage_v": 15.427393913269043,
+        "current_a": 0.0,
+        "remaining": 0.5786135196685791,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 0.647181,
+        "voltage_v": 15.470230102539062,
+        "current_a": 0.0,
+        "remaining": 0.57460618019104,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 0.847167,
+        "voltage_v": 15.349013328552246,
+        "current_a": 0.0,
+        "remaining": 0.5710108280181885,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 1.047167,
+        "voltage_v": 15.371798515319824,
+        "current_a": 0.0,
+        "remaining": 0.5687220096588135,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 1.247167,
+        "voltage_v": 15.38455867767334,
+        "current_a": 0.0,
+        "remaining": 0.5668947696685791,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 1.447187,
+        "voltage_v": 15.371798515319824,
+        "current_a": 0.0,
+        "remaining": 0.563300371170044,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 1.647305,
+        "voltage_v": 15.398229598999023,
+        "current_a": 0.33511874079704285,
+        "remaining": 0.5600855350494385,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 1.847168,
+        "voltage_v": 15.266986846923828,
+        "current_a": 1.232431173324585,
+        "remaining": 0.551804780960083,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 2.047273,
+        "voltage_v": 15.147592544555664,
+        "current_a": 2.446549892425537,
+        "remaining": 0.5467369556427002,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 2.247185,
+        "voltage_v": 15.305265426635742,
+        "current_a": 4.640387535095215,
+        "remaining": 0.5386765003204346,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 2.447168,
+        "voltage_v": 15.369976043701172,
+        "current_a": 6.912968635559082,
+        "remaining": 0.5195448398590088,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 2.647248,
+        "voltage_v": 15.342633247375488,
+        "current_a": 9.7587308883667,
+        "remaining": 0.5008518695831299,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 2.847188,
+        "voltage_v": 15.300708770751953,
+        "current_a": 10.027924537658691,
+        "remaining": 0.48749086260795593,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 3.047168,
+        "voltage_v": 15.183136940002441,
+        "current_a": 10.27331256866455,
+        "remaining": 0.47162458300590515,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 3.247171,
+        "voltage_v": 15.196807861328125,
+        "current_a": 10.52053165435791,
+        "remaining": 0.45686933398246765,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 3.447865,
+        "voltage_v": 15.427393913269043,
+        "current_a": 10.245843887329102,
+        "remaining": 0.44533559679985046,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 3.64717,
+        "voltage_v": 14.902423858642578,
+        "current_a": 9.683650016784668,
+        "remaining": 0.4341146647930145,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 3.84731,
+        "voltage_v": 15.390937805175781,
+        "current_a": 12.46898078918457,
+        "remaining": 0.425554484128952,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 4.047169,
+        "voltage_v": 14.758420944213867,
+        "current_a": 13.128231048583984,
+        "remaining": 0.4093000590801239,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 4.247215,
+        "voltage_v": 15.391849517822266,
+        "current_a": 15.00160026550293,
+        "remaining": 0.3960287272930145,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 4.447172,
+        "voltage_v": 15.143946647644043,
+        "current_a": 15.811012268066406,
+        "remaining": 0.38933297991752625,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 4.647169,
+        "voltage_v": 15.003589630126953,
+        "current_a": 15.928213119506836,
+        "remaining": 0.37796613574028015,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 4.847168,
+        "voltage_v": 15.145769119262695,
+        "current_a": 16.878631591796875,
+        "remaining": 0.3637945353984833,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 5.047169,
+        "voltage_v": 15.172200202941895,
+        "current_a": 16.356725692749023,
+        "remaining": 0.353136271238327,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 5.247169,
+        "voltage_v": 14.999943733215332,
+        "current_a": 16.60028076171875,
+        "remaining": 0.3448507487773895,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 5.44717,
+        "voltage_v": 15.20409870147705,
+        "current_a": 14.422924041748047,
+        "remaining": 0.3307344615459442,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 5.64719,
+        "voltage_v": 14.805814743041992,
+        "current_a": 14.05118179321289,
+        "remaining": 0.3200695216655731,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 5.84717,
+        "voltage_v": 15.005413055419922,
+        "current_a": 16.867643356323242,
+        "remaining": 0.30677053332328796,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 6.047169,
+        "voltage_v": 15.143946647644043,
+        "current_a": 16.34756851196289,
+        "remaining": 0.3034317195415497,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 6.247282,
+        "voltage_v": 14.983539581298828,
+        "current_a": 16.08753204345703,
+        "remaining": 0.29286977648735046,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 6.447259,
+        "voltage_v": 14.707382202148438,
+        "current_a": 15.728606224060059,
+        "remaining": 0.28813669085502625,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 6.64717,
+        "voltage_v": 14.85776424407959,
+        "current_a": 16.605775833129883,
+        "remaining": 0.28639909625053406,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 6.847168,
+        "voltage_v": 14.35831356048584,
+        "current_a": 14.435744285583496,
+        "remaining": 0.27003976702690125,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 7.047188,
+        "voltage_v": 14.578874588012695,
+        "current_a": 16.444625854492188,
+        "remaining": 0.270978182554245,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 7.24717,
+        "voltage_v": 15.479344367980957,
+        "current_a": 17.382225036621094,
+        "remaining": 0.2835037410259247,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 7.447197,
+        "voltage_v": 14.91700553894043,
+        "current_a": 16.78890037536621,
+        "remaining": 0.27775976061820984,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 7.647169,
+        "voltage_v": 14.645406723022461,
+        "current_a": 17.329118728637695,
+        "remaining": 0.25464746356010437,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 7.847208,
+        "voltage_v": 15.01999568939209,
+        "current_a": 18.11106300354004,
+        "remaining": 0.2510339915752411,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 8.047168,
+        "voltage_v": 14.784852027893066,
+        "current_a": 16.061893463134766,
+        "remaining": 0.2584030330181122,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 8.247168,
+        "voltage_v": 14.682774543762207,
+        "current_a": 16.816370010375977,
+        "remaining": 0.24996396899223328,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 8.447189,
+        "voltage_v": 14.435783386230469,
+        "current_a": 18.524925231933594,
+        "remaining": 0.24471017718315125,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 8.647179,
+        "voltage_v": 15.272454261779785,
+        "current_a": 18.3674373626709,
+        "remaining": 0.2433759868144989,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 8.847168,
+        "voltage_v": 14.159626960754395,
+        "current_a": 14.567593574523926,
+        "remaining": 0.24684831500053406,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 9.047334,
+        "voltage_v": 15.029109954833984,
+        "current_a": 17.640432357788086,
+        "remaining": 0.24414750933647156,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 9.24717,
+        "voltage_v": 15.49028205871582,
+        "current_a": 16.640567779541016,
+        "remaining": 0.2444431483745575,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 9.447168,
+        "voltage_v": 14.680039405822754,
+        "current_a": 16.65155601501465,
+        "remaining": 0.23437806963920593,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 9.647169,
+        "voltage_v": 14.910626411437988,
+        "current_a": 17.851024627685547,
+        "remaining": 0.2325746715068817,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 9.847199,
+        "voltage_v": 15.515800476074219,
+        "current_a": 17.076406478881836,
+        "remaining": 0.23898527026176453,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 10.04717,
+        "voltage_v": 14.621709823608398,
+        "current_a": 16.72114372253418,
+        "remaining": 0.2292921245098114,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 10.247205,
+        "voltage_v": 14.525100708007812,
+        "current_a": 16.34390640258789,
+        "remaining": 0.2342226207256317,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 10.447168,
+        "voltage_v": 14.679129600524902,
+        "current_a": 18.330812454223633,
+        "remaining": 0.22419092059135437,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 10.647171,
+        "voltage_v": 14.525100708007812,
+        "current_a": 17.53421974182129,
+        "remaining": 0.2176515758037567,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 10.84769,
+        "voltage_v": 14.851385116577148,
+        "current_a": 18.488300323486328,
+        "remaining": 0.22321149706840515,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 11.047457,
+        "voltage_v": 14.538771629333496,
+        "current_a": 18.50295066833496,
+        "remaining": 0.21080991625785828,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 11.247193,
+        "voltage_v": 14.566113471984863,
+        "current_a": 17.79974937438965,
+        "remaining": 0.20916864275932312,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 11.447172,
+        "voltage_v": 15.099287033081055,
+        "current_a": 18.3637752532959,
+        "remaining": 0.2044222056865692,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 11.647168,
+        "voltage_v": 14.876904487609863,
+        "current_a": 18.75200080871582,
+        "remaining": 0.19783231616020203,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 11.847168,
+        "voltage_v": 14.53603744506836,
+        "current_a": 18.665929794311523,
+        "remaining": 0.2048799693584442,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 12.047169,
+        "voltage_v": 15.082881927490234,
+        "current_a": 17.49942398071289,
+        "remaining": 0.1948377788066864,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 12.247519,
+        "voltage_v": 14.604393005371094,
+        "current_a": 18.411386489868164,
+        "remaining": 0.1969272792339325,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 12.447204,
+        "voltage_v": 14.605304718017578,
+        "current_a": 17.263193130493164,
+        "remaining": 0.19219419360160828,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 12.647189,
+        "voltage_v": 14.886017799377441,
+        "current_a": 18.70072364807129,
+        "remaining": 0.19301435351371765,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 12.84717,
+        "voltage_v": 14.834068298339844,
+        "current_a": 20.68762969970703,
+        "remaining": 0.1935264766216278,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 13.047169,
+        "voltage_v": 14.83862590789795,
+        "current_a": 19.891036987304688,
+        "remaining": 0.1835748851299286,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 13.247168,
+        "voltage_v": 14.114056587219238,
+        "current_a": 17.04344367980957,
+        "remaining": 0.1805107295513153,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 13.447405,
+        "voltage_v": 15.262430191040039,
+        "current_a": 18.11655616760254,
+        "remaining": 0.18678399920463562,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 13.647393,
+        "voltage_v": 14.766623497009277,
+        "current_a": 18.684242248535156,
+        "remaining": 0.19511720538139343,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 13.847171,
+        "voltage_v": 14.479530334472656,
+        "current_a": 17.1130313873291,
+        "remaining": 0.18153592944145203,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 14.047188,
+        "voltage_v": 15.012703895568848,
+        "current_a": 18.396738052368164,
+        "remaining": 0.18727228045463562,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 14.247172,
+        "voltage_v": 15.135743141174316,
+        "current_a": 18.021329879760742,
+        "remaining": 0.18651124835014343,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 14.447169,
+        "voltage_v": 14.942525863647461,
+        "current_a": 18.045137405395508,
+        "remaining": 0.18417760729789734,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 14.64717,
+        "voltage_v": 15.19771957397461,
+        "current_a": 17.325456619262695,
+        "remaining": 0.1925031840801239,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 14.847169,
+        "voltage_v": 14.340996742248535,
+        "current_a": 16.439130783081055,
+        "remaining": 0.18005487322807312,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 15.047168,
+        "voltage_v": 14.715585708618164,
+        "current_a": 18.3271484375,
+        "remaining": 0.18952390551567078,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 15.247259,
+        "voltage_v": 15.184048652648926,
+        "current_a": 18.204456329345703,
+        "remaining": 0.1936924159526825,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 15.447189,
+        "voltage_v": 14.824043273925781,
+        "current_a": 18.579862594604492,
+        "remaining": 0.19518586993217468,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 15.64717,
+        "voltage_v": 14.566113471984863,
+        "current_a": 18.266719818115234,
+        "remaining": 0.19254323840141296,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 15.847209,
+        "voltage_v": 14.228893280029297,
+        "current_a": 16.256006240844727,
+        "remaining": 0.18618318438529968,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 16.047169,
+        "voltage_v": 14.708293914794922,
+        "current_a": 17.61845588684082,
+        "remaining": 0.18304845690727234,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 16.24717,
+        "voltage_v": 14.254413604736328,
+        "current_a": 17.49209976196289,
+        "remaining": 0.177960604429245,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 16.447442,
+        "voltage_v": 14.756598472595215,
+        "current_a": 17.99020004272461,
+        "remaining": 0.17742082476615906,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 16.647201,
+        "voltage_v": 14.22342586517334,
+        "current_a": 15.274456024169922,
+        "remaining": 0.17288896441459656,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 16.847202,
+        "voltage_v": 14.829511642456055,
+        "current_a": 18.402231216430664,
+        "remaining": 0.16984865069389343,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 17.047182,
+        "voltage_v": 14.550621032714844,
+        "current_a": 18.208118438720703,
+        "remaining": 0.15874025225639343,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 17.24717,
+        "voltage_v": 14.326414108276367,
+        "current_a": 16.40250587463379,
+        "remaining": 0.15321847796440125,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 17.447169,
+        "voltage_v": 14.593456268310547,
+        "current_a": 17.85468864440918,
+        "remaining": 0.1602766215801239,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 17.647169,
+        "voltage_v": 14.59072208404541,
+        "current_a": 16.484912872314453,
+        "remaining": 0.16270563006401062,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 17.847195,
+        "voltage_v": 14.302717208862305,
+        "current_a": 18.11106300354004,
+        "remaining": 0.16179105639457703,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 18.047168,
+        "voltage_v": 14.534214973449707,
+        "current_a": 17.964563369750977,
+        "remaining": 0.1667148768901825,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 18.247751,
+        "voltage_v": 14.378364562988281,
+        "current_a": 17.552532196044922,
+        "remaining": 0.15887662768363953,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 18.44717,
+        "voltage_v": 14.317299842834473,
+        "current_a": 17.67339324951172,
+        "remaining": 0.16515085101127625,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 18.647172,
+        "voltage_v": 15.020907402038574,
+        "current_a": 17.68438148498535,
+        "remaining": 0.16560670733451843,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 18.847169,
+        "voltage_v": 14.412086486816406,
+        "current_a": 17.277843475341797,
+        "remaining": 0.15632936358451843,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 19.047168,
+        "voltage_v": 14.385655403137207,
+        "current_a": 16.565486907958984,
+        "remaining": 0.15501901507377625,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 19.247168,
+        "voltage_v": 14.4740629196167,
+        "current_a": 17.070913314819336,
+        "remaining": 0.16251680254936218,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 19.447192,
+        "voltage_v": 14.063929557800293,
+        "current_a": 15.633380889892578,
+        "remaining": 0.1554100215435028,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 19.647271,
+        "voltage_v": 14.621709823608398,
+        "current_a": 18.649450302124023,
+        "remaining": 0.16301271319389343,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 19.847169,
+        "voltage_v": 15.272454261779785,
+        "current_a": 18.449844360351562,
+        "remaining": 0.16058656573295593,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 20.047169,
+        "voltage_v": 14.067574501037598,
+        "current_a": 16.0728816986084,
+        "remaining": 0.15035268664360046,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 20.24718,
+        "voltage_v": 14.713762283325195,
+        "current_a": 17.80707550048828,
+        "remaining": 0.1472475230693817,
+        "warning": 1,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 20.447168,
+        "voltage_v": 15.20592212677002,
+        "current_a": 18.297849655151367,
+        "remaining": 0.14500829577445984,
+        "warning": 1,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 20.647203,
+        "voltage_v": 14.888752937316895,
+        "current_a": 17.53971290588379,
+        "remaining": 0.14282724261283875,
+        "warning": 1,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 20.847168,
+        "voltage_v": 14.309097290039062,
+        "current_a": 16.891448974609375,
+        "remaining": 0.14267560839653015,
+        "warning": 1,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 21.04734,
+        "voltage_v": 14.811283111572266,
+        "current_a": 18.788625717163086,
+        "remaining": 0.14116784930229187,
+        "warning": 1,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 21.247183,
+        "voltage_v": 15.462028503417969,
+        "current_a": 17.893142700195312,
+        "remaining": 0.14929792284965515,
+        "warning": 1,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 21.447168,
+        "voltage_v": 14.132285118103027,
+        "current_a": 17.79059410095215,
+        "remaining": 0.14189359545707703,
+        "warning": 1,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 21.647171,
+        "voltage_v": 14.558822631835938,
+        "current_a": 16.118661880493164,
+        "remaining": 0.1491672694683075,
+        "warning": 1,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 21.84719,
+        "voltage_v": 15.007235527038574,
+        "current_a": 13.38826847076416,
+        "remaining": 0.15883085131645203,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 22.047318,
+        "voltage_v": 14.636292457580566,
+        "current_a": 15.93004322052002,
+        "remaining": 0.16813012957572937,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 22.24717,
+        "voltage_v": 14.594367980957031,
+        "current_a": 18.94061851501465,
+        "remaining": 0.16347524523735046,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 22.447188,
+        "voltage_v": 14.733813285827637,
+        "current_a": 16.422651290893555,
+        "remaining": 0.16108152270317078,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 22.647172,
+        "voltage_v": 14.657254219055176,
+        "current_a": 17.922443389892578,
+        "remaining": 0.15916749835014343,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 22.847169,
+        "voltage_v": 14.643583297729492,
+        "current_a": 17.10204315185547,
+        "remaining": 0.16561433672904968,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 23.047214,
+        "voltage_v": 14.855941772460938,
+        "current_a": 16.59844970703125,
+        "remaining": 0.16200467944145203,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 23.247171,
+        "voltage_v": 15.10384464263916,
+        "current_a": 15.754243850708008,
+        "remaining": 0.1759340465068817,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 23.447171,
+        "voltage_v": 15.149415016174316,
+        "current_a": 18.722700119018555,
+        "remaining": 0.16612836718559265,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 23.647168,
+        "voltage_v": 14.814929008483887,
+        "current_a": 10.905094146728516,
+        "remaining": 0.1856987178325653,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 23.847478,
+        "voltage_v": 14.753864288330078,
+        "current_a": 6.3709187507629395,
+        "remaining": 0.19159337878227234,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 24.047262,
+        "voltage_v": 15.158528327941895,
+        "current_a": 5.781256198883057,
+        "remaining": 0.21461984515190125,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 24.247168,
+        "voltage_v": 15.20592212677002,
+        "current_a": 4.920568466186523,
+        "remaining": 0.23356172442436218,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 24.447168,
+        "voltage_v": 15.075591087341309,
+        "current_a": 3.565443754196167,
+        "remaining": 0.24991247057914734,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 24.647169,
+        "voltage_v": 15.179491996765137,
+        "current_a": 2.4062623977661133,
+        "remaining": 0.26953622698783875,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 24.847168,
+        "voltage_v": 15.145769119262695,
+        "current_a": 1.5913562774658203,
+        "remaining": 0.28737565875053406,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 25.047168,
+        "voltage_v": 15.165821075439453,
+        "current_a": 0.33511874079704285,
+        "remaining": 0.30349084734916687,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 25.247188,
+        "voltage_v": 15.093819618225098,
+        "current_a": 0.16847500205039978,
+        "remaining": 0.32051965594291687,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 25.447218,
+        "voltage_v": 15.099287033081055,
+        "current_a": 0.4907749891281128,
+        "remaining": 0.3358919322490692,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 25.647194,
+        "voltage_v": 15.235087394714355,
+        "current_a": 0.659250020980835,
+        "remaining": 0.34848424792289734,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 25.84717,
+        "voltage_v": 15.161263465881348,
+        "current_a": 0.0,
+        "remaining": 0.35938093066215515,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 26.047167,
+        "voltage_v": 15.198631286621094,
+        "current_a": 0.0,
+        "remaining": 0.37520143389701843,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 26.247166,
+        "voltage_v": 15.194985389709473,
+        "current_a": 0.0,
+        "remaining": 0.3875591456890106,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 26.447189,
+        "voltage_v": 15.212302207946777,
+        "current_a": 0.0,
+        "remaining": 0.3953382670879364,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 26.64719,
+        "voltage_v": 15.158528327941895,
+        "current_a": 0.0,
+        "remaining": 0.4005586802959442,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 26.84725,
+        "voltage_v": 15.192251205444336,
+        "current_a": 0.0,
+        "remaining": 0.4087497889995575,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 27.047168,
+        "voltage_v": 15.257872581481934,
+        "current_a": 0.0,
+        "remaining": 0.4163534343242645,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 27.247167,
+        "voltage_v": 15.110224723815918,
+        "current_a": 0.0,
+        "remaining": 0.4209844768047333,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 27.447167,
+        "voltage_v": 15.215948104858398,
+        "current_a": 0.0,
+        "remaining": 0.4241287410259247,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 27.647182,
+        "voltage_v": 15.194074630737305,
+        "current_a": 0.0,
+        "remaining": 0.4303085505962372,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 27.847168,
+        "voltage_v": 15.246935844421387,
+        "current_a": 0.0,
+        "remaining": 0.4351312816143036,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 28.047198,
+        "voltage_v": 15.243289947509766,
+        "current_a": 0.0,
+        "remaining": 0.43926259875297546,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 28.247168,
+        "voltage_v": 15.205010414123535,
+        "current_a": 0.0,
+        "remaining": 0.43997880816459656,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 28.447456,
+        "voltage_v": 15.249669075012207,
+        "current_a": 0.0,
+        "remaining": 0.4426672160625458,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 28.647253,
+        "voltage_v": 15.246935844421387,
+        "current_a": 0.0,
+        "remaining": 0.44827958941459656,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      }
+    ]
+  },
+  {
+    "file": "log_57_2026-9-28-13-35-16.ulg",
+    "sha256": "dc9513d91067f4038268564572ad1c8b2ab264824914f081d27050a74baa4f5a",
+    "firmware": "d6f12ad1c4f70ad3230afd7d86e971421e02fef4",
+    "samples": [
+      {
+        "t_s": 0.059685,
+        "voltage_v": 15.277923583984375,
+        "current_a": 0.0,
+        "remaining": 0.5190155506134033,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 0.069759,
+        "voltage_v": 15.327138900756836,
+        "current_a": 0.0,
+        "remaining": 0.5189764499664307,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 0.259681,
+        "voltage_v": 15.19316291809082,
+        "current_a": 0.0,
+        "remaining": 0.5128939151763916,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 0.459704,
+        "voltage_v": 15.233264923095703,
+        "current_a": 0.0,
+        "remaining": 0.5082581043243408,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 0.65968,
+        "voltage_v": 15.337164878845215,
+        "current_a": 0.0,
+        "remaining": 0.5044357776641846,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 0.85968,
+        "voltage_v": 15.334430694580078,
+        "current_a": 0.0,
+        "remaining": 0.5003912448883057,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 1.059704,
+        "voltage_v": 15.259695053100586,
+        "current_a": 0.0,
+        "remaining": 0.4967338740825653,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 1.25971,
+        "voltage_v": 15.176756858825684,
+        "current_a": 0.0,
+        "remaining": 0.49382421374320984,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 1.459696,
+        "voltage_v": 15.272454261779785,
+        "current_a": 0.2527124881744385,
+        "remaining": 0.4898845851421356,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 1.659683,
+        "voltage_v": 15.155795097351074,
+        "current_a": 0.957743763923645,
+        "remaining": 0.4845983684062958,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 1.859704,
+        "voltage_v": 15.20136547088623,
+        "current_a": 1.540081262588501,
+        "remaining": 0.4760601222515106,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 2.059701,
+        "voltage_v": 15.3116455078125,
+        "current_a": 3.296250104904175,
+        "remaining": 0.4665977656841278,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 2.259683,
+        "voltage_v": 15.230530738830566,
+        "current_a": 4.792381286621094,
+        "remaining": 0.4544841945171356,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 2.459683,
+        "voltage_v": 14.793965339660645,
+        "current_a": 6.191456317901611,
+        "remaining": 0.4394476115703583,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 2.659955,
+        "voltage_v": 14.926119804382324,
+        "current_a": 9.25696849822998,
+        "remaining": 0.427416056394577,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 2.859682,
+        "voltage_v": 14.872346878051758,
+        "current_a": 8.193012237548828,
+        "remaining": 0.40545961260795593,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 3.059683,
+        "voltage_v": 15.002678871154785,
+        "current_a": 9.13061237335205,
+        "remaining": 0.39919015765190125,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 3.259701,
+        "voltage_v": 15.119338989257812,
+        "current_a": 8.440231323242188,
+        "remaining": 0.38083192706108093,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 3.459683,
+        "voltage_v": 15.239645004272461,
+        "current_a": 10.137799263000488,
+        "remaining": 0.37683412432670593,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 3.659826,
+        "voltage_v": 15.0281982421875,
+        "current_a": 10.170762062072754,
+        "remaining": 0.3677169978618622,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 3.859684,
+        "voltage_v": 15.165821075439453,
+        "current_a": 10.670693397521973,
+        "remaining": 0.3593160808086395,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 4.05989,
+        "voltage_v": 15.502129554748535,
+        "current_a": 11.22189998626709,
+        "remaining": 0.34763166308403015,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 4.259683,
+        "voltage_v": 14.779383659362793,
+        "current_a": 11.591813087463379,
+        "remaining": 0.34033510088920593,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 4.459683,
+        "voltage_v": 15.279747009277344,
+        "current_a": 12.972575187683105,
+        "remaining": 0.3375990092754364,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 4.659701,
+        "voltage_v": 14.844093322753906,
+        "current_a": 13.402918815612793,
+        "remaining": 0.32126161456108093,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 4.859681,
+        "voltage_v": 14.984450340270996,
+        "current_a": 13.25825023651123,
+        "remaining": 0.30153772234916687,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 5.0597,
+        "voltage_v": 15.101110458374023,
+        "current_a": 13.595199584960938,
+        "remaining": 0.30245134234428406,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 5.259696,
+        "voltage_v": 14.988096237182617,
+        "current_a": 14.30938720703125,
+        "remaining": 0.28970739245414734,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 5.459693,
+        "voltage_v": 14.915184020996094,
+        "current_a": 13.82960033416748,
+        "remaining": 0.27962133288383484,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 5.659686,
+        "voltage_v": 14.659989356994629,
+        "current_a": 15.316575050354004,
+        "remaining": 0.2751114070415497,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 5.859684,
+        "voltage_v": 14.747485160827637,
+        "current_a": 16.10767364501953,
+        "remaining": 0.2660638988018036,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 6.059701,
+        "voltage_v": 14.586165428161621,
+        "current_a": 16.193744659423828,
+        "remaining": 0.2511608302593231,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 6.259683,
+        "voltage_v": 14.645406723022461,
+        "current_a": 16.781574249267578,
+        "remaining": 0.22387143969535828,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 6.459681,
+        "voltage_v": 14.54788589477539,
+        "current_a": 16.136974334716797,
+        "remaining": 0.2197706401348114,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 6.659701,
+        "voltage_v": 14.803991317749023,
+        "current_a": 16.896944046020508,
+        "remaining": 0.22002050280570984,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 6.859683,
+        "voltage_v": 14.741104125976562,
+        "current_a": 17.378562927246094,
+        "remaining": 0.22062990069389343,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 7.059681,
+        "voltage_v": 15.339900016784668,
+        "current_a": 17.730161666870117,
+        "remaining": 0.22127363085746765,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 7.259681,
+        "voltage_v": 14.349199295043945,
+        "current_a": 17.2229061126709,
+        "remaining": 0.2070448100566864,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 7.459702,
+        "voltage_v": 14.64996337890625,
+        "current_a": 19.272075653076172,
+        "remaining": 0.19791242480278015,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 7.659681,
+        "voltage_v": 15.091996192932129,
+        "current_a": 18.442520141601562,
+        "remaining": 0.1860048472881317,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 7.859683,
+        "voltage_v": 14.373807907104492,
+        "current_a": 16.77974510192871,
+        "remaining": 0.1943943202495575,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 8.059748,
+        "voltage_v": 14.279932022094727,
+        "current_a": 16.40250587463379,
+        "remaining": 0.19659730792045593,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 8.259683,
+        "voltage_v": 14.373807907104492,
+        "current_a": 15.468568801879883,
+        "remaining": 0.19471094012260437,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 8.459696,
+        "voltage_v": 15.462939262390137,
+        "current_a": 17.352924346923828,
+        "remaining": 0.20021364092826843,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 8.659681,
+        "voltage_v": 14.719230651855469,
+        "current_a": 16.741287231445312,
+        "remaining": 0.18773576617240906,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 8.859701,
+        "voltage_v": 14.680039405822754,
+        "current_a": 17.04527473449707,
+        "remaining": 0.18021318316459656,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 9.06012,
+        "voltage_v": 14.37471866607666,
+        "current_a": 16.829187393188477,
+        "remaining": 0.1675407588481903,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 9.26004,
+        "voltage_v": 15.232353210449219,
+        "current_a": 18.048799514770508,
+        "remaining": 0.17224809527397156,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 9.459684,
+        "voltage_v": 15.005413055419922,
+        "current_a": 18.352787017822266,
+        "remaining": 0.16898080706596375,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 9.659682,
+        "voltage_v": 14.303628921508789,
+        "current_a": 17.823556900024414,
+        "remaining": 0.16284295916557312,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 9.859681,
+        "voltage_v": 14.598012924194336,
+        "current_a": 18.18614387512207,
+        "remaining": 0.1627504527568817,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 10.059682,
+        "voltage_v": 14.354667663574219,
+        "current_a": 17.266855239868164,
+        "remaining": 0.14423486590385437,
+        "warning": 1,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 10.259702,
+        "voltage_v": 14.090359687805176,
+        "current_a": 16.54351234436035,
+        "remaining": 0.150250643491745,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 10.4597,
+        "voltage_v": 14.54970932006836,
+        "current_a": 14.939337730407715,
+        "remaining": 0.1522943675518036,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 10.659686,
+        "voltage_v": 14.7046480178833,
+        "current_a": 14.776355743408203,
+        "remaining": 0.15865251421928406,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 10.859695,
+        "voltage_v": 14.916094779968262,
+        "current_a": 12.483631134033203,
+        "remaining": 0.1616937816143036,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 11.059685,
+        "voltage_v": 14.640850067138672,
+        "current_a": 16.54534339904785,
+        "remaining": 0.1672355830669403,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 11.259684,
+        "voltage_v": 15.372709274291992,
+        "current_a": 18.57436752319336,
+        "remaining": 0.17564508318901062,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 11.459681,
+        "voltage_v": 15.09017276763916,
+        "current_a": 16.814537048339844,
+        "remaining": 0.16957494616508484,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 11.659892,
+        "voltage_v": 14.18332290649414,
+        "current_a": 19.240942001342773,
+        "remaining": 0.16394254565238953,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 11.859694,
+        "voltage_v": 15.173111915588379,
+        "current_a": 13.199650764465332,
+        "remaining": 0.18091413378715515,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 12.059884,
+        "voltage_v": 14.903334617614746,
+        "current_a": 6.303162574768066,
+        "remaining": 0.1974146068096161,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 12.259681,
+        "voltage_v": 14.82039737701416,
+        "current_a": 4.922399520874023,
+        "remaining": 0.21490785479545593,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 12.459681,
+        "voltage_v": 14.930676460266113,
+        "current_a": 3.5379750728607178,
+        "remaining": 0.22989103198051453,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 12.659718,
+        "voltage_v": 15.039134979248047,
+        "current_a": 2.1846811771392822,
+        "remaining": 0.2565252482891083,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 12.859717,
+        "voltage_v": 14.89604377746582,
+        "current_a": 1.3478000164031982,
+        "remaining": 0.27752038836479187,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 13.05986,
+        "voltage_v": 15.171289443969727,
+        "current_a": 0.5768437385559082,
+        "remaining": 0.29892274737358093,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 13.25968,
+        "voltage_v": 15.000855445861816,
+        "current_a": 0.0,
+        "remaining": 0.31552430987358093,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 13.459772,
+        "voltage_v": 15.144857406616211,
+        "current_a": 0.6519249677658081,
+        "remaining": 0.3310072124004364,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 13.659681,
+        "voltage_v": 15.216859817504883,
+        "current_a": 0.7453187704086304,
+        "remaining": 0.3465425670146942,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 13.85968,
+        "voltage_v": 15.060096740722656,
+        "current_a": 0.0,
+        "remaining": 0.35629579424858093,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 14.05968,
+        "voltage_v": 15.115693092346191,
+        "current_a": 0.0,
+        "remaining": 0.36621496081352234,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 14.259899,
+        "voltage_v": 15.196807861328125,
+        "current_a": 0.0,
+        "remaining": 0.37802717089653015,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 14.459739,
+        "voltage_v": 15.196807861328125,
+        "current_a": 0.0,
+        "remaining": 0.3886968791484833,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 14.659681,
+        "voltage_v": 15.167642593383789,
+        "current_a": 0.0,
+        "remaining": 0.39563772082328796,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 14.860233,
+        "voltage_v": 15.134833335876465,
+        "current_a": 0.0,
+        "remaining": 0.3983862102031708,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 15.05968,
+        "voltage_v": 15.1630859375,
+        "current_a": 0.0,
+        "remaining": 0.4044172465801239,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 15.259681,
+        "voltage_v": 15.188606262207031,
+        "current_a": 0.0,
+        "remaining": 0.4100668132305145,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 15.459693,
+        "voltage_v": 15.159440040588379,
+        "current_a": 0.0,
+        "remaining": 0.4142744243144989,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 15.65968,
+        "voltage_v": 15.181313514709473,
+        "current_a": 0.0,
+        "remaining": 0.4147760570049286,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 15.859701,
+        "voltage_v": 15.194074630737305,
+        "current_a": 0.0,
+        "remaining": 0.41952916979789734,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 16.059722,
+        "voltage_v": 15.2031888961792,
+        "current_a": 0.0,
+        "remaining": 0.42438337206840515,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 16.259724,
+        "voltage_v": 15.202277183532715,
+        "current_a": 0.0,
+        "remaining": 0.4289657771587372,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 16.45968,
+        "voltage_v": 15.218682289123535,
+        "current_a": 0.0,
+        "remaining": 0.4310304820537567,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      },
+      {
+        "t_s": 16.659681,
+        "voltage_v": 15.219593048095703,
+        "current_a": 0.0,
+        "remaining": 0.4346286952495575,
+        "warning": 0,
+        "connected": 1,
+        "faults": 0
+      }
+    ]
+  }
+]

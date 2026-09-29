@@ -1,0 +1,17 @@
+mission_manager:
+  ros__parameters:
+    test_scenario_enabled: true
+    forward_test_camera_required: false
+    enable_event_control: false
+px4_offboard_controller:
+  ros__parameters:
+    test_scenario_enabled: true
+    terminal_requires_owned_offboard: true
+    forward_test_camera_required: false
+    require_jetson_safety: true
+mavlink_usb_bridge:
+  ros__parameters:
+    test_scenario_enabled: true
+operator_gateway:
+  ros__parameters:
+    test_scenario_enabled: true

@@ -1,0 +1,27 @@
+# Local environments and generated files
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+node_modules/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+*.log
+*.tsbuildinfo
+*.ulg
+*.sqlite
+*.db
+
+# ROS workspace outputs
+**/ros2_ws/build/
+**/ros2_ws/install/
+**/ros2_ws/log/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

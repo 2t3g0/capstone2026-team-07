@@ -1,0 +1,6 @@
+bool active
+string source
+string reason
+---
+bool accepted
+string message

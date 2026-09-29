@@ -1,0 +1,161 @@
+mission_planner:
+  ros__parameters:
+    planner_endpoint: http://127.0.0.1:9293/v1/plan/text
+    planner_timeout_s: 30.0
+
+mission_manager:
+  ros__parameters:
+    acceptance_radius_m: 2.0
+    takeoff_timeout_s: 60.0
+    waypoint_timeout_s: 120.0
+    landing_timeout_s: 90.0
+    vehicle_ready_timeout_s: 10.0
+    max_laps: 100
+    max_duration_minutes: 120
+    allow_goal_waypoints: true
+    # The safety lease starts after HOLD confirmation and allows two seconds of
+    # release/flush margin around the fixed five-second encoded clip.
+    event_control_max_duration_s: 7.0
+    enable_event_control: true
+    event_hold_settle_s: 0.5
+    event_hold_timeout_s: 3.0
+    event_hold_drift_tolerance_m: 0.15
+    event_rejoin_lookahead_m: 5.0
+
+px4_offboard_controller:
+  ros__parameters:
+    simulation_only: true
+    enable_px4_commands: false
+    allow_real_hardware: false
+    offboard_warmup_s: 1.0
+    manual_command_timeout_s: 0.5
+    px4_status_timeout_s: 1.0
+    # AirSim event capture does not publish obstacle safety decisions.
+    require_jetson_safety: false
+    # Native depth and Phase1 use separate workers.  If the 10 Hz safety path
+    # is silent for 0.5 s, stop instead of extrapolating from an old frame.
+    jetson_safety_timeout_s: 0.5
+    jetson_min_confidence: 0.5
+    max_jetson_velocity_mps: 1.0
+    # Initial physical-flight cap.  The Jetson trigger expands with measured
+    # speed and latency, but early D435/X500 trials stay at or below 1 m/s.
+    max_route_velocity_mps: 1.0
+    # Keep the obstacle-climb altitude until CLEAR is stable, then descend to
+    # the unchanged route altitude while retaining time to stop on re-detection.
+    avoidance_clear_confirmations: 3
+    # Each HOLD/EVADE depth hit is projected onto the route using PX4 pose and
+    # yaw. Keep the farthest observed obstacle position and pass it by 5 m.
+    # With no usable projection, pass the stable-CLEAR point by the same 5 m.
+    avoidance_obstacle_clearance_m: 5.0
+    # Zero avoids silently adding another forward margin beyond the requested
+    # 5 m. A nonzero value remains available for lateral rejoin tuning.
+    avoidance_rejoin_lookahead_m: 0.0
+    avoidance_rejoin_tolerance_m: 0.5
+    require_descent_corridor_clear: true
+    # A 2 m/s descent overshot the lower-corridor stop during roof recovery.
+    # Keep this conservative until vertical stopping clearance is validated.
+    avoidance_return_speed_mps: 0.5
+    avoidance_altitude_tolerance_m: 0.25
+    # Each 1 m maximum ascent target holds XY, brakes before the target, and
+    # requires settled vertical velocity plus a newer decision before retrying.
+    avoidance_step_climb_enabled: true
+    avoidance_climb_step_m: 1.0
+    avoidance_step_tolerance_m: 0.08
+    avoidance_step_deceleration_mps2: 0.6
+    avoidance_step_reaction_time_s: 0.15
+    avoidance_step_settle_speed_mps: 0.1
+    avoidance_step_settle_s: 0.2
+    require_roof_geometry: true
+    # Strictly greater than this conservative geometry-derived body clearance.
+    minimum_roof_gap_m: 1.0
+    expected_jetson_safety_source: jetson-realsense-d435i
+
+jetson_safety_bridge:
+  ros__parameters:
+    jetson_url: http://192.168.50.112:8765
+    camera_topic: /camera/front/compressed
+    # SIYI A8-equivalent 1280 px stream with an 81 degree horizontal FOV.
+    camera_focal_px: 749.343722
+    request_timeout_s: 2.0
+    min_publish_interval_s: 0.1
+    position_timeout_s: 0.5
+    gimbal_forward: true
+
+d435i_safety_bridge:
+  ros__parameters:
+    depth_topic: /camera/d435i/depth/image
+    position_timeout_s: 0.5
+    depth_timeout_s: 0.5
+    # Local debug fallback.  Production Jetson depth starts with the same
+    # low-speed floor and expands it from speed, latency and braking distance.
+    trigger_distance_m: 3.0
+    release_distance_m: 5.5
+    trigger_frames: 3
+    min_depth_m: 0.15
+    max_depth_m: 20.0
+    min_valid_fraction: 0.25
+    min_obstacle_fraction: 0.05
+    near_percentile: 10.0
+    horizontal_roi_fraction: 0.5
+    # Outdoor default: hold forward motion and climb vertically.
+    vertical_speed_mps: 0.6
+    max_altitude_m: 15.0
+    altitude_margin_m: 0.5
+
+jetson_d435i_bridge:
+  ros__parameters:
+    jetson_url: http://192.168.50.112:8765
+    color_topic: /camera/front/compressed
+    depth_topic: /camera/d435i/depth/image
+    request_timeout_s: 0.5
+    min_publish_interval_s: 0.05
+    # Native D435 depth is the flight-critical up-to-20 Hz path. The d435i names are
+    # retained as wire-compatibility aliases.  Phase1 is a
+    # separate, slower JPEG-only request so GPU event inference cannot delay
+    # obstacle decisions.
+    phase1_enabled: true
+    phase1_publish_interval_s: 1.0
+    phase1_request_timeout_s: 10.0
+    phase1_watchdog_timeout_s: 15.0
+    sensor_timeout_s: 0.5
+    position_timeout_s: 0.5
+    max_pair_skew_s: 0.075
+    eager_pair_skew_s: 0.010
+    pair_holdback_s: 0.080
+    require_angular_velocity: true
+    gimbal_forward: true
+    capture_duration_s: 5.0
+
+event_response:
+  ros__parameters:
+    # Launch overrides these to ros_compressed/fixed for the Gazebo incident E2E.
+    enabled: true
+    recording_enabled: true
+    gimbal_commands_enabled: true
+    camera_backend: airsim
+    gimbal_backend: airsim
+    ros_camera_topic: /camera/front/compressed
+    allow_local_capture_without_control: true
+    airsim_host: 127.0.0.1
+    airsim_port: 41451
+    airsim_vehicle_name: PatrolDrone
+    airsim_camera_name: front_center
+    airsim_mount_x_m: 0.25
+    airsim_mount_y_m: 0.0
+    airsim_mount_z_m: 0.0
+    storage_root: /mnt/c/work/jolgwajetson/outputs/event_captures
+    capture_duration_s: 5.0
+    capture_fps: 25
+    capture_bitrate_bps: 8000000
+    yaw_min_deg: -90.0
+    yaw_max_deg: 90.0
+    pitch_min_deg: -80.0
+    pitch_max_deg: 20.0
+    max_yaw_rate_deg_s: 30.0
+    max_pitch_rate_deg_s: 20.0
+    target_lost_grace_s: 1.0
+    lease_request_timeout_s: 2.0
+    hold_ready_timeout_s: 4.0
+    horizontal_fov_deg: 90.0
+    vertical_fov_deg: 58.7
+    request_source: airsim-event-node

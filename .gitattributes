@@ -1,0 +1,2 @@
+# Keep the verified release bytes unchanged across Windows and Linux checkouts.
+software/runtimeio1/** -text

@@ -1,0 +1,20 @@
+# Owned small-obstacle SITL only. Not a physical route or Home calibration.
+schema_version: "1.0"
+coordinate_convention: ENU
+site: GAZEBO_SMALL_OBSTACLE_INTEGRATED
+simulation_only: true
+geofence:
+  polygon_enu:
+    - [-10.0, -10.0]
+    - [10.0, -10.0]
+    - [10.0, 50.0]
+    - [-10.0, 50.0]
+zones:
+  GAZEBO_SMALL:
+    name: small_obstacle_3m_northbound
+    # Existing test wall: North20..21/East+-1.5/top3.2m.
+    # QGC-equivalent takeoff3m, then the same nominal route altitude.
+    # ENU yaw90deg is north; return uses actual visited path/actual PX4 Home.
+    waypoints:
+      - [0.0, 0.0, 3.0, 90.0]
+      - [0.0, 40.0, 3.0, 90.0]

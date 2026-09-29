@@ -1,0 +1,14 @@
+string mission_id
+string proposal_id
+string plan_json
+geometry_msgs/Point[] waypoints_enu
+float32 takeoff_altitude_m
+---
+bool success
+uint8 final_phase
+string message
+---
+uint8 phase
+uint32 current_waypoint
+uint32 total_waypoints
+string detail

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "defaults": {
+    "mode": "observe",
+    "execution_enabled": false,
+    "camera_model": "D435",
+    "capture_duration_s": 5.0,
+    "capture_fps": 25,
+    "retention": "permanent",
+    "obstacle_trigger_m": 3.0,
+    "climb_step_m": 1.0,
+    "roof_clearance_m": 1.0,
+    "default_past_obstacle_m": 5.0
+  },
+  "stages": [
+    {"id": 1, "name": "ground", "title_ko": "지상 연결 확인·사건 리허설", "goal_ko": "기존 관측기의 거리·판단 기록과 사건 모델·5초 녹화를 비행 없이 확인", "ros_experiment_stage": null},
+    {"id": 2, "name": "jetson-sitl", "title_ko": "실제 Jetson 연산 + SITL", "goal_ko": "Gazebo 영상·깊이를 실제 Jetson에 보내고 같은 SITL 기체로 판단이 돌아오는지 확인", "ros_experiment_stage": 2},
+    {"id": 3, "name": "route-observe", "title_ko": "대시보드 경로 + 관찰", "goal_ko": "기존 대시보드 승인 경로를 유지하며 Jetson은 판단·거리·사건을 기록만 함", "ros_experiment_stage": 3},
+    {"id": 4, "name": "route-avoid", "title_ko": "경로 + 장애물 1개 회피·복귀", "goal_ko": "승인 경로를 일시 중단해 장애물 1개를 회피하고 원래 경로로 복귀, 사건 대응 꺼짐", "ros_experiment_stage": 4},
+    {"id": 5, "name": "event-only", "title_ko": "사건 정지·5초 촬영·귀환", "goal_ko": "회피 상승 없이 사건을 찾아 정지·5초 촬영·실제 Home 귀환, 예상 밖 장애물은 정지", "ros_experiment_stage": 5},
+    {"id": 6, "name": "integrated", "title_ko": "장애물 1개 + 사건 1개 통합", "goal_ko": "승인 경로→회피·재합류→사건 정지·촬영→실제 Home 귀환", "ros_experiment_stage": 6}
+  ]
+}

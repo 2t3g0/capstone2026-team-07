@@ -1,0 +1,27 @@
+/**:
+  ros__parameters:
+    # Endpoint defaults follow startup mode: observe=localhost:8766, control=localhost:8765.
+    color_topic: /camera/camera/color/image_raw/compressed
+    depth_topic: /camera/camera/depth/image_rect_raw
+    depth_camera_info_topic: /camera/camera/depth/camera_info
+    phase1_enabled: false
+    geometry_required: true
+    require_angular_velocity: true
+    # 2026-09-10: user-authorized CAD placement from x500_low_profile_full.blend.
+    # Nominal D435 depth origin, relative to the CAD Pixhawk case centre.
+    # 2026-09-11: user accepts this CAD/level mounting and coarse range check
+    # as the validation basis for a limited demonstration. OBSERVE ONLY here.
+    # This is an operator-accepted approximate datum, not new precision metrology
+    # or evidence that automatic real flight has passed validation.
+    # Provenance: D435_MODEL_MOUNT_20260910.md / model_transform.json.
+    geometry_calibrated: true
+    camera_mount_x_m: 0.212032023
+    camera_mount_y_m: -0.017867732
+    camera_mount_z_m: 0.076592663
+    camera_mount_roll_rad: 0.0
+    camera_mount_pitch_rad: 0.0
+    camera_mount_yaw_rad: 0.0
+    sensor_timeout_s: 0.5
+    position_timeout_s: 0.25
+    max_pair_skew_s: 0.075
+    observer_log_dir: outputs/d435_observer

@@ -1,0 +1,88 @@
+{
+  "ulog_sha256": "fbed398c49204b29d8b22406f76d7cdafd7c535d4567078fb84c218ebd182b68",
+  "firmware": "d6f12ad1c4f70ad3230afd7d86e971421e02fef4",
+  "explanation": "ODOMETRY reconstructed from actual local-position, attitude and rates; no ODOMETRY topic logged. Source and receipt cadence replayed at local sample timestamps. MAVLink receipt timings are synthetic, not proven from ULog. Global coordinates/AMSL and latest logged Home are replayed too, with MAVLink integer quantisation.",
+  "yaw_correction_deg": 9.40622233623974,
+  "samples": [
+    {
+      "time_usec": 1813815127,
+      "position": [
+        0.03731100261211395,
+        -0.6810083985328674,
+        -0.313446044921875
+      ],
+      "velocity": [
+        -0.06934403628110886,
+        -0.11138346046209335,
+        -0.45187345147132874
+      ],
+      "q": [
+        0.9817616939544678,
+        0.01305814553052187,
+        0.03305036574602127,
+        0.18676532804965973
+      ],
+      "angular_rates": [
+        0.00769455311819911,
+        -0.029109325259923935,
+        0.00550216855481267
+      ],
+      "global_position": [
+        35.231663269388484,
+        129.08215249632948,
+        38.782814025878906
+      ],
+      "local_counters": [
+        3,
+        3,
+        2,
+        1,
+        4
+      ]
+    },
+    {
+      "time_usec": 1813914660,
+      "position": [
+        0.030809622257947922,
+        -0.6933560967445374,
+        -0.3577003479003906
+      ],
+      "velocity": [
+        -0.06341799348592758,
+        -0.09288401156663895,
+        -0.45060211420059204
+      ],
+      "q": [
+        0.9633232355117798,
+        0.010737344622612,
+        0.032128553837537766,
+        0.26619720458984375
+      ],
+      "angular_rates": [
+        0.004407385364174843,
+        -0.044757548719644547,
+        0.0021042670123279095
+      ],
+      "global_position": [
+        35.231663235545675,
+        129.0821522021315,
+        38.875457763671875
+      ],
+      "local_counters": [
+        3,
+        3,
+        2,
+        1,
+        5
+      ]
+    }
+  ],
+  "home_message": {
+    "latitude": 352316601,
+    "longitude": 1290821534,
+    "altitude": 37289,
+    "x": -0.308872252702713,
+    "y": -0.5737154483795166,
+    "z": 1.2733917236328125
+  }
+}

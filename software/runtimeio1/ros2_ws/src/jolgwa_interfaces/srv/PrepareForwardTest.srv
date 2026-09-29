@@ -1,0 +1,6 @@
+string operator_id
+float32 target_altitude_home_m
+---
+bool accepted
+string proposal_id
+string message

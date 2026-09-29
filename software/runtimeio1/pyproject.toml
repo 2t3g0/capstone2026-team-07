@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rescue-vision"
+version = "0.1.0"
+description = "Low-latency SIYI A8 Mini perception pipeline for Jetson Orin Nano"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi>=0.115,<1",
+  "httpx>=0.28,<1",
+  "numpy>=1.23,<2",
+  "pydantic>=2.11,<3",
+  "python-multipart>=0.0.20,<1",
+  "PyYAML>=6.0",
+  "uvicorn>=0.34,<1",
+  "websockets>=12,<16",
+]
+
+[project.optional-dependencies]
+dev = [
+  "opencv-python-headless>=4.8,<5",
+  "pytest>=8.0",
+]
+flight = [
+  "pymavlink>=2.4.41,<3",
+  "pyserial>=3.5,<4",
+]
+voice = [
+  "sounddevice>=0.5,<1",
+]
+export = [
+  "onnx>=1.16",
+  "torch>=2.2",
+  "transformers>=4.44,<5",
+]
+
+[project.scripts]
+rescue-vision = "rescue_vision.cli:main"
+jolgwa-uav = "jolgwa_uav.cli:main"
+jolgwa-jetson-compute = "jolgwa_uav.jetson_compute_service:main"
+jolgwa-airsim-autonomy = "jolgwa_uav.airsim_autonomy:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
